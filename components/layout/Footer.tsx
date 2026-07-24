@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
-import { Mail, MapPin, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, ShieldCheck, MessageSquare } from "lucide-react";
 
 export function Footer() {
   const footerLinks = [
@@ -54,6 +54,23 @@ export function Footer() {
 
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#162347] border border-white/15 text-[#10B981] flex items-center justify-center shrink-0">
+                  <MessageSquare className="w-4 h-4 text-[#10B981]" />
+                </div>
+                <div>
+                  <span className="text-[#F8FAFC] font-semibold block">WhatsApp & Phone</span>
+                  <a
+                    href="https://wa.me/2348129973621?text=Hello%20Scholatech%2C%20I%20would%20like%20to%20inquire%20about%20your%20school%20management%20portal%2C%20website%2C%20or%20offline%20CBT%20solutions."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#10B981] font-mono font-bold hover:underline"
+                  >
+                    08129973621 (+234 812 997 3621)
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#162347] border border-white/15 text-[#60A5FA] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
