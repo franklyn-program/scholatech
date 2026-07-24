@@ -10,7 +10,6 @@ import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { FounderTrust } from "@/components/sections/FounderTrust";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { FinalCTA } from "@/components/sections/FinalCTA";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 
 export const metadata = {
@@ -35,7 +34,6 @@ export default function HomePage() {
           <PricingSection />
           <FounderTrust />
           <FAQSection />
-          <FinalCTA />
         </main>
         <Footer />
       </div>

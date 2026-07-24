@@ -2,7 +2,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata = {
   title: "Pricing Packages: Scholatech Studio",
@@ -16,7 +15,6 @@ export default function PricingPage() {
       <main className="flex-grow pt-20">
         <PricingSection />
         <ComparisonTable />
-        <FinalCTA />
       </main>
       <Footer />
     </div>

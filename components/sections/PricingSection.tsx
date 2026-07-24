@@ -10,7 +10,7 @@ const plans = [
     name: "School Website & Portal",
     badge: "Admissions & Prestige",
     icon: Laptop,
-    price: "Custom Scope",
+    price: "Starts at ₦150,000 only",
     subtitle: "One-time payment · Owned forever",
     description: "High-converting, mobile-first website with online application forms, termly result checker portal, and parent communication tools.",
     features: [
@@ -22,7 +22,7 @@ const plans = [
       "Staff onboarding & technical handoff",
     ],
     highlight: false,
-    ctaText: "Request Scope for Website",
+    ctaText: "Contact Us for Website",
     accentColor: "#4169FF",
   },
   {
@@ -30,7 +30,7 @@ const plans = [
     name: "School Management System",
     badge: "Most Popular for Proprietors",
     icon: Zap,
-    price: "Custom Scope",
+    price: "Starts at ₦300,000 only",
     subtitle: "One-time payment · Owned forever",
     description: "Complete operational suite covering admissions, bursary fee tracking, continuous assessment (CA), automated report cards, and payroll.",
     features: [
@@ -42,7 +42,7 @@ const plans = [
       "Full database & code transfer to your server",
     ],
     highlight: true,
-    ctaText: "Request Scope for Management System",
+    ctaText: "Contact Us for Management System",
     accentColor: "#10B981",
   },
   {
@@ -50,7 +50,7 @@ const plans = [
     name: "100% Offline CBT Lab",
     badge: "Infrastructure Independence",
     icon: Server,
-    price: "Custom Scope",
+    price: "Starts at ₦300,000 only",
     subtitle: "One-time payment · Owned forever",
     description: "Bank-grade Computer Based Testing system running 100% offline inside your school computer lab network with zero data costs.",
     features: [
@@ -62,7 +62,7 @@ const plans = [
       "Full source code & local database delivered",
     ],
     highlight: false,
-    ctaText: "Request Scope for CBT Lab",
+    ctaText: "Contact Us for CBT Lab",
     accentColor: "#5A7DFF",
   },
 ];
@@ -71,7 +71,7 @@ export function PricingSection() {
   return (
     <section id="pricing" className="relative py-28 px-4 sm:px-6 lg:px-8 bg-[#050816] overflow-hidden border-t border-white/[0.06] scroll-mt-20">
       {/* Background ambient glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(65,105,255,0.12)_0%,rgba(5,8,22,0)_70%)] blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(65,105,255,0.08)_0%,rgba(5,8,22,0)_70%)] blur-[90px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10 space-y-16">
         {/* Header */}
@@ -147,7 +147,10 @@ export function PricingSection() {
                     <h3 className="text-xl font-heading font-extrabold text-[#F8FAFC]">
                       {plan.name}
                     </h3>
-                    <p className="text-xs text-[#7A879C] mt-1 font-mono">{plan.subtitle}</p>
+                    <div className="text-lg font-heading font-extrabold text-[#10B981] mt-1">
+                      {plan.price}
+                    </div>
+                    <p className="text-xs text-[#7A879C] mt-0.5 font-mono">{plan.subtitle}</p>
                   </div>
 
                   <p className="text-xs text-[#AAB4C5] leading-relaxed">
@@ -172,7 +175,7 @@ export function PricingSection() {
                 <div className="pt-8 mt-6 border-t border-white/[0.06]">
                   <MagneticButton className="w-full">
                     <a
-                      href={`/contact?service=${encodeURIComponent(plan.name)}`}
+                      href="#contact"
                       className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full font-heading font-bold text-xs transition-all duration-300 ${
                         plan.highlight
                           ? "bg-[#10B981] hover:bg-[#059669] text-[#050816] shadow-[0_0_25px_rgba(16,185,129,0.3)]"
@@ -187,17 +190,6 @@ export function PricingSection() {
               </motion.div>
             );
           })}
-        </div>
-
-        {/* Guarantees Box */}
-        <div className="p-8 rounded-2xl bg-[#0A1020] border border-white/[0.06] max-w-4xl mx-auto text-center space-y-4 shadow-xl">
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-[#10B981]">
-            <ShieldCheck className="w-4 h-4" />
-            Full Source Code & Database Handover Included
-          </div>
-          <p className="text-sm text-[#AAB4C5] leading-relaxed max-w-2xl mx-auto">
-            Need a custom combination of CBT labs, online portal, and management system? We offer bundled discounts for schools modernizing their entire technical setup.
-          </p>
         </div>
       </div>
     </section>
