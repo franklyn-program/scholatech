@@ -36,32 +36,32 @@ export async function POST(request: Request) {
       console.warn("Supabase record warning:", dbErr);
     }
 
-    // 2. Email Dispatcher Strategy
-    // Strategy A: Resend API Key (If configured in Vercel environment variables)
+    // 2. Email Dispatcher Strategy (Resend API)
     const resendApiKey = process.env.RESEND_API_KEY;
     if (resendApiKey) {
       try {
+        const cleanPhone = phone.replace(/[^0-9]/g, "");
         await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: Bearer ,
+            Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
             from: "Scholatech Lead <onboarding@resend.dev>",
             to: [recipient],
-            subject: [New Lead]  - ,
-            html: 
+            subject: `[New Lead] ${school_name} - ${service_needed}`,
+            html: `
               <div style="font-family: sans-serif; padding: 20px; color: #1e293b;">
                 <h2 style="color: #3b82f6;">New School Lead Received</h2>
-                <p><strong>Proprietor/Contact Name:</strong> </p>
-                <p><strong>School Name:</strong> </p>
-                <p><strong>Email Address:</strong> </p>
-                <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/"></a></p>
-                <p><strong>Primary Solution Needed:</strong> </p>
-                <p><strong>Message / Timeline:</strong> </p>
+                <p><strong>Proprietor/Contact Name:</strong> ${name}</p>
+                <p><strong>School Name:</strong> ${school_name}</p>
+                <p><strong>Email Address:</strong> ${email}</p>
+                <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/${cleanPhone}">${phone}</a></p>
+                <p><strong>Primary Solution Needed:</strong> ${service_needed}</p>
+                <p><strong>Message / Timeline:</strong> ${message || "N/A"}</p>
               </div>
-            ,
+            `,
           }),
         });
       } catch (mailErr) {
@@ -69,7 +69,7 @@ export async function POST(request: Request) {
       }
     }
 
-    // Strategy B: Webhook / Formspree Endpoint (If configured in env)
+    // Strategy B: Webhook / Formspree Endpoint
     const webhookUrl = process.env.NOTIFICATION_WEBHOOK_URL;
     if (webhookUrl) {
       try {
@@ -78,7 +78,7 @@ export async function POST(request: Request) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             _replyto: email,
-            _subject: [Scholatech Lead]  - ,
+            _subject: `[Scholatech Lead] ${school_name} - ${service_needed}`,
             name,
             school_name,
             email,
