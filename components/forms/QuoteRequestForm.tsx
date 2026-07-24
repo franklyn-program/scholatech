@@ -233,20 +233,6 @@ function QuoteRequestFormInner() {
           </>
         )}
       </button>
-
-      <div className="pt-1 text-center">
-        <a
-          href={`https://wa.me/2348129973621?text=${encodeURIComponent(
-            `Hello Scholatech, I am interested in ${formData.service_needed} for ${formData.school_name || "my school"}. My name is ${formData.name || "a school proprietor"}. ${formData.message || ""}`
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 w-full py-3 px-6 rounded-full bg-[#10B981]/15 hover:bg-[#10B981]/25 border border-[#10B981]/40 text-[#10B981] font-heading font-bold text-xs transition-all duration-300"
-        >
-          <MessageSquare className="w-3.5 h-3.5" />
-          <span>Or Chat Directly on WhatsApp (08129973621)</span>
-        </a>
-      </div>
     </form>
   );
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FadeIn } from "../motion/FadeIn";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
-import { ShieldCheck, CheckCircle2, ArrowRight } from "lucide-react";
+import { ShieldCheck, CheckCircle2, ArrowRight, MessageSquare } from "lucide-react";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -110,14 +110,26 @@ export function Hero() {
             <FadeIn direction="left" delay={0.2}>
               <div className="bg-[#162347]/70 border border-white/20 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5 shadow-2xl backdrop-blur-2xl">
                 
-                {/* Form Header */}
-                <div className="pb-3 border-b border-white/10 text-center lg:text-left">
-                  <h3 className="text-xl font-heading font-extrabold text-[#F8FAFC]">
-                    Contact Us
-                  </h3>
-                  <p className="text-xs text-[#AAB4C5] mt-1">
-                    Send us a message to discuss your school&apos;s requirements.
-                  </p>
+                {/* Form Header with WhatsApp Icon */}
+                <div className="pb-3 border-b border-white/10 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-xl font-heading font-extrabold text-[#F8FAFC]">
+                      Contact Us
+                    </h3>
+                    <p className="text-xs text-slate-300 mt-0.5">
+                      Send us a message to discuss your school&apos;s requirements.
+                    </p>
+                  </div>
+                  <a
+                    href="https://wa.me/2348129973621?text=Hello%20Scholatech%2C%20I%20would%20like%20to%20inquire%20about%20your%20school%20software%20and%20CBT%20solutions."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Chat on WhatsApp"
+                    aria-label="Chat on WhatsApp"
+                    className="w-10 h-10 rounded-full bg-[#10B981] hover:bg-[#059669] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-all shrink-0 ml-3"
+                  >
+                    <MessageSquare className="w-5 h-5" />
+                  </a>
                 </div>
 
                 {/* Form Component */}
