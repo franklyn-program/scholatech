@@ -40,8 +40,10 @@ export default function CBTSolutionPage() {
             </div>
 
             <div className="pt-6">
-              <Button href="/contact" variant="green" size="lg">
-                Request CBT Lab Scope <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild size="lg">
+                <a href="/#contact">
+                  Request CBT Lab Scope <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
               </Button>
             </div>
           </div>

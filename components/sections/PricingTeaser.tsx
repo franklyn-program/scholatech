@@ -41,9 +41,11 @@ export function PricingTeaser() {
             </p>
 
             <div className="pt-2">
-              <Button href="/pricing" variant="primary" size="lg">
-                See full pricing packages
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button asChild size="lg">
+                <a href="/pricing">
+                  See full pricing packages
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
               </Button>
             </div>
           </div>

@@ -40,8 +40,10 @@ export default function WebsiteSolutionPage() {
             </div>
 
             <div className="pt-6">
-              <Button href="/contact" size="lg">
-                Request Website Scope & Quote <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild size="lg">
+                <a href="/#contact">
+                  Request Website Scope & Quote <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
               </Button>
             </div>
           </div>

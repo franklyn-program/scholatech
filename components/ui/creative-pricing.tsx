@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -99,7 +99,7 @@ function CreativePricing({
 
                                 <div className="mb-6">
                                     <span className="text-2xl font-extrabold font-heading text-[#10B981]">
-                                        {typeof tier.price === 'number' ? $ : tier.price}
+                                        {tier.price}
                                     </span>
                                     <span className="text-xs text-slate-400 block font-mono mt-0.5">
                                         One-time payment · Owned forever
