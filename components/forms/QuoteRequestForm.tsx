@@ -250,7 +250,7 @@ export function QuoteRequestForm() {
           </>
         ) : (
           <>
-            <span>Request Your Scoping and Quote</span>
+            <span>Send Message</span>
             <Send className="w-3.5 h-3.5 ml-1" />
           </>
         )}
