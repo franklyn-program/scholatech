@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { Send, CheckCircle2, AlertCircle, Loader2, Mail } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
-export function QuoteRequestForm() {
+function QuoteRequestFormInner() {
   const searchParams = useSearchParams();
   const preselectedService = searchParams ? searchParams.get("service") : null;
 
@@ -55,7 +55,7 @@ export function QuoteRequestForm() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Unable to send quote request. Please try again.");
+        throw new Error(data.error || "Unable to send request. Please try again.");
       }
 
       setSuccess(true);
@@ -68,57 +68,47 @@ export function QuoteRequestForm() {
   };
 
   if (success) {
-    const mailtoSubject = encodeURIComponent(`[Quote Request] ${formData.school_name} - ${formData.service_needed}`);
-    const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nSchool: ${formData.school_name}\nPhone: ${formData.phone}\nService: ${formData.service_needed}\nMessage: ${formData.message}`);
-
     return (
-      <div className="bg-[#050816] border border-[#10B981]/40 rounded-2xl p-6 text-center space-y-4 shadow-2xl">
-        <div className="w-12 h-12 bg-[#10B981]/20 text-[#10B981] rounded-full flex items-center justify-center mx-auto">
-          <CheckCircle2 className="w-7 h-7" />
-        </div>
-        <h3 className="font-heading font-extrabold text-xl text-[#F8FAFC]">
-          Quote Request Received!
-        </h3>
-        <p className="text-[#AAB4C5] text-xs leading-relaxed max-w-sm mx-auto">
-          Sent to Lead Architect at{" "}
-          <span className="font-mono text-[11px] font-bold text-[#5A7DFF] bg-[#4169FF]/10 px-2 py-0.5 rounded border border-[#4169FF]/30">
-            agboseakade1@gmail.com
-          </span>. We will respond within 24 hours.
+      <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-3">
+        <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto" />
+        <h4 className="font-heading font-extrabold text-lg text-white">Message Sent Successfully!</h4>
+        <p className="text-xs text-slate-300 leading-relaxed">
+          Thank you for reaching out. Our team will contact you shortly via email or WhatsApp to discuss your requirements.
         </p>
-
-        <div className="pt-2 flex flex-col gap-2">
-          <a
-            href={`mailto:agboseakade1@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`}
-            className="w-full inline-flex items-center justify-center gap-2 bg-[#4169FF] hover:bg-[#6D8DFF] text-white font-heading font-bold text-xs py-3 px-4 rounded-full transition-all"
-          >
-            <Mail className="w-4 h-4" />
-            <span>Open Email App Directly</span>
-          </a>
-
-          <button
-            onClick={() => {
-              setSuccess(false);
-              setFormData({
-                name: "",
-                school_name: "",
-                email: "",
-                phone: "",
-                service_needed: "School Management System",
-                message: "",
-                website_hp: "",
-              });
-            }}
-            className="text-[11px] text-[#AAB4C5] hover:text-white underline pt-1"
-          >
-            Submit another request
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            setSuccess(false);
+            setFormData({
+              name: "",
+              school_name: "",
+              email: "",
+              phone: "",
+              service_needed: "School Management System",
+              message: "",
+              website_hp: "",
+            });
+          }}
+          className="text-xs text-[#60A5FA] underline pt-2 inline-block font-mono"
+        >
+          Send another message
+        </button>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 font-sans text-left">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot field for bot protection */}
+      <input
+        type="text"
+        name="website_hp"
+        value={formData.website_hp}
+        onChange={handleChange}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       {errorMsg && (
         <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
           <AlertCircle className="w-4 h-4 shrink-0" />
@@ -126,22 +116,10 @@ export function QuoteRequestForm() {
         </div>
       )}
 
-      <div className="hidden" aria-hidden="true">
-        <input
-          type="text"
-          id="website_hp"
-          name="website_hp"
-          tabIndex={-1}
-          value={formData.website_hp}
-          onChange={handleChange}
-          autoComplete="off"
-        />
-      </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label htmlFor="name" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-[#AAB4C5] mb-1">
-            Full Name <span className="text-rose-400">*</span>
+          <label htmlFor="name" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-slate-300 mb-1">
+            Your Full Name <span className="text-rose-400">*</span>
           </label>
           <input
             type="text"
@@ -151,12 +129,12 @@ export function QuoteRequestForm() {
             placeholder="e.g. Dr. Frank Okonjo"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
 
         <div>
-          <label htmlFor="school_name" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-[#AAB4C5] mb-1">
+          <label htmlFor="school_name" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-slate-300 mb-1">
             School Name <span className="text-rose-400">*</span>
           </label>
           <input
@@ -167,14 +145,14 @@ export function QuoteRequestForm() {
             placeholder="e.g. Royal Rangers Academy"
             value={formData.school_name}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label htmlFor="email" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-[#AAB4C5] mb-1">
+          <label htmlFor="email" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-slate-300 mb-1">
             Email Address <span className="text-rose-400">*</span>
           </label>
           <input
@@ -185,12 +163,12 @@ export function QuoteRequestForm() {
             placeholder="e.g. admin@school.edu.ng"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-[#AAB4C5] mb-1">
+          <label htmlFor="phone" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-slate-300 mb-1">
             Phone (WhatsApp) <span className="text-rose-400">*</span>
           </label>
           <input
@@ -201,31 +179,31 @@ export function QuoteRequestForm() {
             placeholder="e.g. +234 803 000 0000"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="service_needed" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-[#AAB4C5] mb-1">
-          Primary Product Needed <span className="text-rose-400">*</span>
+        <label htmlFor="service_needed" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-slate-300 mb-1">
+          Primary Solution Needed <span className="text-rose-400">*</span>
         </label>
         <select
           id="service_needed"
           name="service_needed"
           value={formData.service_needed}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-white/[0.08] bg-[#050816] text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors"
         >
-          <option value="School Website and Portal">School Website and Portal (Admissions and Results)</option>
-          <option value="School Management System">School Management System (Fees and Full Admin)</option>
-          <option value="100% Offline CBT Lab">100% Offline CBT Lab Software Installation</option>
-          <option value="Full Studio Package (Web + SMS + CBT)">Full Studio Package (Web + SMS + CBT)</option>
+          <option value="School Website and Portal" className="bg-[#0E1B38] text-white">School Website & Portal (₦150k)</option>
+          <option value="School Management System" className="bg-[#0E1B38] text-white">School Management System (₦300k)</option>
+          <option value="100% Offline CBT Lab" className="bg-[#0E1B38] text-white">100% Offline CBT Lab (₦300k)</option>
+          <option value="Full Studio Package (Web + SMS + CBT)" className="bg-[#0E1B38] text-white">Full Package (Web + SMS + CBT)</option>
         </select>
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-[#AAB4C5] mb-1">
+        <label htmlFor="message" className="block text-[10px] font-heading font-bold uppercase tracking-wider text-slate-300 mb-1">
           Details / Timeline (Optional)
         </label>
         <textarea
@@ -235,14 +213,14 @@ export function QuoteRequestForm() {
           placeholder="Student count, current setup, target launch date..."
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
         ></textarea>
       </div>
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#4169FF] hover:bg-[#6D8DFF] text-white font-heading font-bold text-xs shadow-[0_0_25px_rgba(65,105,255,0.4)] transition-all duration-300 disabled:opacity-50"
+        className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#3B82F6] hover:bg-[#2563EB] text-white font-heading font-bold text-xs shadow-lg transition-all duration-300 disabled:opacity-50"
       >
         {loading ? (
           <>
@@ -256,5 +234,20 @@ export function QuoteRequestForm() {
         )}
       </button>
     </form>
+  );
+}
+
+export function QuoteRequestForm() {
+  return (
+    <Suspense
+      fallback={
+        <div className="p-8 text-center text-xs text-slate-400 flex items-center justify-center gap-2">
+          <Loader2 className="w-4 h-4 animate-spin text-[#3B82F6]" />
+          <span>Loading form...</span>
+        </div>
+      }
+    >
+      <QuoteRequestFormInner />
+    </Suspense>
   );
 }
