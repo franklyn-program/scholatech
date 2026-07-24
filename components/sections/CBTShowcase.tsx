@@ -75,12 +75,12 @@ export function CBTShowcase() {
             <SectionLabel>Case Study · CBT Center Installation</SectionLabel>
           </FadeIn>
           <FadeIn direction="up" delay={0.1}>
-            <Heading as="h2" className="text-emerald-950">
-              Offline Computer Lab CBT Engine
+            <Heading as="h2" className="text-[#050816] text-2xl sm:text-4xl lg:text-5xl font-extrabold text-center tracking-tight">
+              Exams That Do Not Need The Internet
             </Heading>
           </FadeIn>
           <FadeIn direction="up" delay={0.2}>
-            <Paragraph size="lg" className="max-w-2xl mx-auto text-emerald-900/80">
+            <Paragraph size="lg" className="max-w-2xl mx-auto text-emerald-950/80 text-sm sm:text-base text-center">
               See how Nigerian schools run stress-free termly examinations and WAEC/JAMB mock tests with 100% internet-free offline local servers.
             </Paragraph>
           </FadeIn>

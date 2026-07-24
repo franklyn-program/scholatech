@@ -28,11 +28,11 @@ export function OwnershipMoats() {
       <div className="space-y-32 max-w-7xl mx-auto relative z-10">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <motion.div {...fadeUp(0)} className="lg:col-span-5 space-y-6">
+          <motion.div {...fadeUp(0)} className="lg:col-span-5 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start">
             <span className="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-mono font-bold uppercase tracking-wider border border-blue-100">The Ownership Model</span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 leading-tight">Management systems built to your blueprint.</h2>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">We do not sell subscriptions. We build assets. Your school gets a custom management portal tailored to your specific grading, financial, and administrative workflows. Once built, it is yours forever.</p>
-            <ul className="space-y-3 pt-2">
+            <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-slate-900 leading-tight text-center lg:text-left">Management systems built to your blueprint.</h2>
+            <p className="text-sm sm:text-lg text-slate-600 leading-relaxed text-center lg:text-left">We do not sell subscriptions. We build assets. Your school gets a custom management portal tailored to your specific grading, financial, and administrative workflows. Once built, it is yours forever.</p>
+            <ul className="space-y-3 pt-2 text-left">
               <li className="flex items-center gap-3 text-sm font-semibold text-slate-800"><CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" /><span>Custom grading logic and report card formats</span></li>
               <li className="flex items-center gap-3 text-sm font-semibold text-slate-800"><CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" /><span>Integrated fee management and tracking</span></li>
             </ul>
