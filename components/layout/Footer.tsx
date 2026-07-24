@@ -41,7 +41,7 @@ export function Footer() {
 
             <div className="space-y-3 pt-2 text-xs">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#0A1020] border border-white/10 text-[#4169FF] flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#050816] border border-white/10 text-[#4169FF] flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#0A1020] border border-white/10 text-[#10B981] flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#050816] border border-white/10 text-[#10B981] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
@@ -85,7 +85,7 @@ export function Footer() {
 
           {/* Right Edge: Embedded Footer Contact Card */}
           <div className="lg:col-span-7">
-            <div className="bg-[#0A1020]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl backdrop-blur-xl">
+            <div className="bg-[#050816]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl backdrop-blur-xl">
               <div className="pb-3 border-b border-white/10 flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-heading font-extrabold text-[#F8FAFC]">

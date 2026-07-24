@@ -126,9 +126,9 @@ export function ScholatechAIChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-24 right-4 sm:right-6 z-50 w-[92vw] sm:w-[380px] max-h-[580px] h-[78vh] rounded-3xl bg-[#0A1020] border border-white/[0.1] shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-24 right-4 sm:right-6 z-50 w-[92vw] sm:w-[380px] max-h-[580px] h-[78vh] rounded-3xl bg-[#050816] border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl flex flex-col overflow-hidden"
           >
-            <div className="p-4 sm:p-5 bg-[#050816] border-b border-white/[0.08] flex items-center justify-between">
+            <div className="p-4 sm:p-5 bg-[#050816] border-b border-white/10 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-[#4169FF]/20 border border-[#4169FF]/40 flex items-center justify-center text-[#5A7DFF]">
                   <Bot className="w-5 h-5" />
@@ -170,7 +170,7 @@ export function ScholatechAIChatbot() {
                     className={`max-w-[80%] rounded-2xl p-3.5 space-y-2 leading-relaxed ${
                       msg.sender === "user"
                         ? "bg-[#4169FF] text-white rounded-tr-none shadow-[0_0_15px_rgba(65,105,255,0.3)]"
-                        : "bg-[#111827] border border-white/[0.08] text-[#F8FAFC] rounded-tl-none"
+                        : "bg-[#050816]/90 border border-white/10 text-[#F8FAFC] rounded-tl-none"
                     }`}
                   >
                     <p>{msg.text}</p>
@@ -203,7 +203,7 @@ export function ScholatechAIChatbot() {
                   <div className="w-6 h-6 rounded-full bg-[#4169FF]/20 border border-[#4169FF]/40 text-[#5A7DFF] flex items-center justify-center shrink-0">
                     <Bot className="w-3.5 h-3.5" />
                   </div>
-                  <div className="px-4 py-2 rounded-full bg-[#111827] border border-white/[0.08] flex items-center gap-1">
+                  <div className="px-4 py-2 rounded-full bg-[#050816]/90 border border-white/10 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-bounce" />
                     <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-bounce [animation-delay:0.2s]" />
                     <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-bounce [animation-delay:0.4s]" />
@@ -213,22 +213,22 @@ export function ScholatechAIChatbot() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div className="px-4 py-2 bg-[#050816]/80 border-t border-white/[0.06] flex items-center gap-2 overflow-x-auto no-scrollbar scrollbar-none">
+            <div className="px-4 py-2 bg-[#050816]/80 border-t border-white/10 flex items-center gap-2 overflow-x-auto no-scrollbar scrollbar-none">
               <button
                 onClick={() => handleSend("How does offline CBT work?")}
-                className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#111827] border border-white/[0.08] text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
+                className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#050816] border border-white/10 text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
               >
                 Offline CBT?
               </button>
               <button
                 onClick={() => handleSend("What is the pricing model?")}
-                className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#111827] border border-white/[0.08] text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
+                className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#050816] border border-white/10 text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
               >
                 Pricing details?
               </button>
               <button
                 onClick={() => handleSend("Do we get the source code?")}
-                className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#111827] border border-white/[0.08] text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
+                className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#050816] border border-white/10 text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
               >
                 Source Code?
               </button>
@@ -239,14 +239,14 @@ export function ScholatechAIChatbot() {
                 e.preventDefault();
                 handleSend();
               }}
-              className="p-3 bg-[#050816] border-t border-white/[0.08] flex items-center gap-2"
+              className="p-3 bg-[#050816] border-t border-white/10 flex items-center gap-2"
             >
               <input
                 type="text"
                 placeholder="Ask about CBT, pricing, source code..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="flex-grow px-3.5 py-2.5 rounded-xl bg-[#111827] border border-white/[0.08] text-xs text-[#F8FAFC] focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+                className="flex-grow px-3.5 py-2.5 rounded-xl bg-[#050816] border border-white/10 text-xs text-[#F8FAFC] focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
               />
               <button
                 type="submit"

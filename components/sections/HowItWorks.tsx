@@ -25,14 +25,14 @@ export function HowItWorks() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(65,105,255,0.07)_0%,rgba(5,8,22,0)_70%)] blur-[80px] pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
-          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0A1020] border border-white/[0.06] text-[#5A7DFF] text-[11px] font-bold tracking-widest uppercase">How It Works</motion.div>
+          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#050816] border border-white/10 text-[#5A7DFF] text-[11px] font-bold tracking-widest uppercase">How It Works</motion.div>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="text-3xl sm:text-5xl font-heading font-extrabold text-[#F8FAFC] tracking-tight">Four steps to complete ownership.</motion.h2>
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="text-base sm:text-lg text-[#AAB4C5]">From first call to full code ownership. No middlemen, no subscriptions.</motion.p>
         </div>
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
           <motion.div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-[#4169FF] via-[#5A7DFF] to-[#10B981] origin-left" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }} />
           {steps.map((step) => (
-            <motion.div key={step.num} variants={cardVariants} whileHover={{ y: -6, transition: { duration: 0.25 } }} className="group relative p-8 rounded-2xl bg-[#111827]/80 border border-white/[0.06] hover:border-[#4169FF]/40 backdrop-blur-xl transition-colors duration-300 flex flex-col space-y-4 shadow-xl">
+            <motion.div key={step.num} variants={cardVariants} whileHover={{ y: -6, transition: { duration: 0.25 } }} className="group relative p-8 rounded-2xl bg-[#050816]/90 border border-white/10 hover:border-[#4169FF]/40 backdrop-blur-xl transition-colors duration-300 flex flex-col space-y-4 shadow-xl">
               <div className="relative w-11 h-11 flex items-center justify-center">
                 <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500" style={{ background: step.color + "40" }} />
                 <div className="relative w-11 h-11 rounded-full flex items-center justify-center font-heading font-extrabold text-sm border border-white/10 z-10" style={{ background: "linear-gradient(135deg, " + step.color + "30, " + step.color + "10)" }}>
