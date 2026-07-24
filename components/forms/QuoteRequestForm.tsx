@@ -151,7 +151,7 @@ export function QuoteRequestForm() {
             placeholder="e.g. Dr. Frank Okonjo"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/[0.08] bg-[#050816] text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
           />
         </div>
 
@@ -167,7 +167,7 @@ export function QuoteRequestForm() {
             placeholder="e.g. Royal Rangers Academy"
             value={formData.school_name}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/[0.08] bg-[#050816] text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
           />
         </div>
       </div>
@@ -185,7 +185,7 @@ export function QuoteRequestForm() {
             placeholder="e.g. admin@school.edu.ng"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/[0.08] bg-[#050816] text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
           />
         </div>
 
@@ -201,7 +201,7 @@ export function QuoteRequestForm() {
             placeholder="e.g. +234 803 000 0000"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/[0.08] bg-[#050816] text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
           />
         </div>
       </div>
@@ -235,7 +235,7 @@ export function QuoteRequestForm() {
           placeholder="Student count, current setup, target launch date..."
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-white/[0.08] bg-[#050816] text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#050816]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"
         ></textarea>
       </div>
 

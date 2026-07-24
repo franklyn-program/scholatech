@@ -108,7 +108,7 @@ export function Hero() {
           {/* Right Column: Clean Contact Form Container */}
           <div id="contact" className="lg:col-span-5 scroll-mt-28">
             <FadeIn direction="left" delay={0.2}>
-              <div className="bg-[#0A1020]/95 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-5 shadow-2xl backdrop-blur-xl">
+              <div className="bg-[#0A1020]/50 border border-white/15 rounded-2xl p-6 sm:p-8 space-y-5 shadow-2xl backdrop-blur-2xl">
                 
                 {/* Form Header */}
                 <div className="pb-3 border-b border-white/10">
