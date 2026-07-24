@@ -1,0 +1,115 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --bg-main: #050816;
+    --bg-surface: #0a1020;
+    --bg-card: #111827;
+    --border-glow: rgba(255, 255, 255, 0.06);
+    --primary-accent: #4169ff;
+    --secondary-accent: #5a7dff;
+    --hover-accent: #6d8dff;
+    --text-primary: #f8fafc;
+    --text-secondary: #aab4c5;
+    --text-muted: #7a879c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  }
+
+  /* Lenis Smooth Scroll Base Styles */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #050816;
+    color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection-background-color: #4169ff;
+    selection-color: #ffffff;
+  }
+
+  /* Custom Focus Ring Indicator for WCAG AA compliance */
+  *:focus-visible {
+    outline: 2px solid #4169ff;
+    outline-offset: 2px;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050816;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4169ff;
+  }
+}
+
+@layer utilities {
+  .bg-radial-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(65, 105, 255, 0.15) 0%, rgba(5, 8, 22, 0) 70%);
+  }
+
+  .glass-card {
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(26, 35, 56, 0.85);
+    border-color: rgba(65, 105, 255, 0.35);
+    box-shadow: 0 0 35px -5px rgba(65, 105, 255, 0.3);
+    transform: translateY(-4px);
+  }
+}
+
+/* Reduced motion accessibility rules */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
