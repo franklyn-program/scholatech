@@ -16,7 +16,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#050816] text-[#AAB4C5] py-14 px-4 sm:px-6 lg:px-8 overflow-hidden z-20 border-t border-white/10">
+    <footer className="relative bg-[#0E1B38] text-[#AAB4C5] py-14 px-4 sm:px-6 lg:px-8 overflow-hidden z-20 border-t border-white/10">
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Top Split Row: Left Brand & Contact Info + Right Compact Contact Form */}
@@ -35,30 +35,30 @@ export function Footer() {
               />
             </Link>
 
-            <p className="text-xs text-[#AAB4C5] leading-relaxed max-w-sm">
+            <p className="text-xs text-slate-300 leading-relaxed max-w-sm">
               Scholatech is a premier EdTech studio building school management portals, websites, and offline CBT suites with 100% source code ownership.
             </p>
 
             <div className="space-y-3 pt-2 text-xs">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#050816] border border-white/10 text-[#4169FF] flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#162347] border border-white/15 text-[#60A5FA] flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-[#F8FAFC] font-semibold block">Direct Email</span>
-                  <a href="mailto:agboseakade1@gmail.com" className="text-[#5A7DFF] font-mono hover:underline">
+                  <a href="mailto:agboseakade1@gmail.com" className="text-[#60A5FA] font-mono hover:underline">
                     agboseakade1@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#050816] border border-white/10 text-[#10B981] flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#162347] border border-white/15 text-[#10B981] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-[#F8FAFC] font-semibold block">Headquarters</span>
-                  <span className="text-[#AAB4C5]">Lagos & Plateau State, Nigeria</span>
+                  <span className="text-slate-300">Lagos & Plateau State, Nigeria</span>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export function Footer() {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-[#AAB4C5] hover:text-[#4169FF] transition-colors"
+                      className="text-slate-300 hover:text-[#60A5FA] transition-colors"
                     >
                       {link.name}
                     </a>
@@ -85,7 +85,7 @@ export function Footer() {
 
           {/* Right Edge: Embedded Footer Contact Card */}
           <div className="lg:col-span-7">
-            <div className="bg-[#050816]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl backdrop-blur-xl">
+            <div className="bg-[#162347]/90 border border-white/15 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl backdrop-blur-xl">
               <div className="pb-3 border-b border-white/10 flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-heading font-extrabold text-[#F8FAFC]">

@@ -169,14 +169,14 @@ function DeviceScreen({
 function LaptopFrame({ project, slideIdx, setSlideIdx, reset }: { project: (typeof projects)[0]; slideIdx: number; setSlideIdx: (i: number) => void; reset: () => void; }) {
   return (
     <div className="relative w-full max-w-[680px]">
-      <div className="relative mx-auto rounded-t-2xl bg-[#0A1020] p-3 border-t-2 border-x-2 border-white/15 shadow-[0_25px_60px_rgba(0,0,0,0.9)]">
-        <div className="w-2 h-2 rounded-full bg-white/20 mx-auto mb-2" />
-        <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden border border-white/[0.06]">
+      <div className="relative mx-auto rounded-t-2xl bg-[#162347] p-3 border-t-2 border-x-2 border-white/20 shadow-2xl">
+        <div className="w-2 h-2 rounded-full bg-white/30 mx-auto mb-2" />
+        <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden border border-white/10">
           <DeviceScreen project={project} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
         </div>
       </div>
-      <div className="relative mx-auto h-4 w-[108%] -ml-[4%] rounded-b-xl bg-gradient-to-b from-[#1E293B] to-[#0A1020] border-t border-white/20 shadow-2xl flex items-center justify-center">
-        <div className="w-16 h-1 rounded-full bg-white/20" />
+      <div className="relative mx-auto h-4 w-[108%] -ml-[4%] rounded-b-xl bg-gradient-to-b from-[#1E293B] to-[#162347] border-t border-white/20 shadow-2xl flex items-center justify-center">
+        <div className="w-16 h-1 rounded-full bg-white/30" />
       </div>
     </div>
   );
@@ -185,15 +185,15 @@ function LaptopFrame({ project, slideIdx, setSlideIdx, reset }: { project: (type
 function TabletFrame({ project, slideIdx, setSlideIdx, reset }: { project: (typeof projects)[0]; slideIdx: number; setSlideIdx: (i: number) => void; reset: () => void; }) {
   return (
     <div className="relative w-full max-w-[380px] mx-auto">
-      <div className="relative rounded-[2rem] bg-[#0A1020] border-4 border-white/15 shadow-[0_25px_60px_rgba(0,0,0,0.9)] p-3">
+      <div className="relative rounded-[2rem] bg-[#162347] border-4 border-white/20 shadow-2xl p-3">
         <div className="flex justify-center mb-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
+          <div className="w-2.5 h-2.5 rounded-full bg-white/30" />
         </div>
-        <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden border border-white/[0.06]">
+        <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden border border-white/10">
           <DeviceScreen project={project} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
         </div>
         <div className="flex justify-center mt-3">
-          <div className="w-12 h-1 rounded-full bg-white/20" />
+          <div className="w-12 h-1 rounded-full bg-white/30" />
         </div>
       </div>
     </div>
@@ -203,18 +203,18 @@ function TabletFrame({ project, slideIdx, setSlideIdx, reset }: { project: (type
 function PhoneFrame({ project, slideIdx, setSlideIdx, reset }: { project: (typeof projects)[0]; slideIdx: number; setSlideIdx: (i: number) => void; reset: () => void; }) {
   return (
     <div className="relative w-full max-w-[220px] mx-auto">
-      <div className="relative rounded-[2.5rem] bg-[#0A1020] border-4 border-white/15 shadow-[0_25px_60px_rgba(0,0,0,0.9)] p-2.5">
+      <div className="relative rounded-[2.5rem] bg-[#162347] border-4 border-white/20 shadow-2xl p-2.5">
         <div className="flex justify-center mb-1.5">
-          <div className="w-16 h-4 rounded-full bg-[#050816] border border-white/10 flex items-center justify-center gap-1.5 px-3">
-            <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
-            <div className="flex-1 h-1 rounded-full bg-white/10" />
+          <div className="w-16 h-4 rounded-full bg-[#0E1B38] border border-white/15 flex items-center justify-center gap-1.5 px-3">
+            <div className="w-1.5 h-1.5 rounded-full bg-white/30" />
+            <div className="flex-1 h-1 rounded-full bg-white/20" />
           </div>
         </div>
-        <div className="relative aspect-[9/16] w-full rounded-2xl overflow-hidden border border-white/[0.06]">
+        <div className="relative aspect-[9/16] w-full rounded-2xl overflow-hidden border border-white/10">
           <DeviceScreen project={project} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
         </div>
         <div className="flex justify-center mt-2">
-          <div className="w-10 h-1 rounded-full bg-white/20" />
+          <div className="w-10 h-1 rounded-full bg-white/30" />
         </div>
       </div>
     </div>
@@ -252,18 +252,18 @@ export function Portfolio() {
     <section
       id="case-studies"
       ref={containerRef}
-      className="relative w-full min-h-screen bg-[#050816] py-14 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-white/[0.06] flex items-center"
+      className="relative w-full min-h-screen bg-[#0E1B38] py-14 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-white/10 flex items-center"
     >
       <div
-        className="absolute inset-0 pointer-events-none opacity-20 transition-all duration-1000"
-        style={{ background: `radial-gradient(circle at 50% 40%, ${activeProject.glowColor} 0%, rgba(5,8,22,0) 70%)` }}
+        className="absolute inset-0 pointer-events-none opacity-25 transition-all duration-1000"
+        style={{ background: `radial-gradient(circle at 50% 40%, ${activeProject.glowColor} 0%, rgba(14,27,56,0) 70%)` }}
       />
 
       <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 flex-col gap-4 z-20">
         {projects.map((proj, idx) => (
           <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} aria-label={`View ${proj.title}`} className="group flex items-center gap-2.5">
-            <div className={`w-1 rounded-full transition-all duration-500 ${activeProjectIdx === idx ? "h-10 bg-[#4169FF] shadow-[0_0_8px_#4169FF]" : "h-4 bg-white/20 group-hover:bg-white/40"}`} />
-            <span className={`text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${activeProjectIdx === idx ? "text-[#5A7DFF] opacity-100" : "text-[#7A879C] opacity-0 group-hover:opacity-60"}`}>
+            <div className={`w-1 rounded-full transition-all duration-500 ${activeProjectIdx === idx ? "h-10 bg-[#3B82F6] shadow-md" : "h-4 bg-white/20 group-hover:bg-white/40"}`} />
+            <span className={`text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${activeProjectIdx === idx ? "text-[#60A5FA] opacity-100" : "text-slate-400 opacity-0 group-hover:opacity-60"}`}>
               {proj.title}
             </span>
           </button>
@@ -273,22 +273,22 @@ export function Portfolio() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0A1020] border border-white/[0.06] text-[#5A7DFF] text-[11px] font-bold tracking-widest uppercase mb-3">
-              <Laptop className="w-3.5 h-3.5 text-[#4169FF]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#162347] border border-white/15 text-[#60A5FA] text-[11px] font-bold tracking-widest uppercase mb-3">
+              <Laptop className="w-3.5 h-3.5 text-[#3B82F6]" />
               Keynote Presentation - Real Projects
             </div>
             <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#F8FAFC] tracking-tight">Real outcomes in schools like yours.</h2>
           </div>
           <div className="flex items-center gap-3">
             {projects.map((proj, idx) => (
-              <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} className={`h-2.5 rounded-full transition-all duration-500 ${activeProjectIdx === idx ? "w-10 bg-[#4169FF] shadow-[0_0_12px_#4169FF]" : "w-2.5 bg-white/20 hover:bg-white/40"}`} aria-label={`View project: ${proj.title}`} />
+              <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} className={`h-2.5 rounded-full transition-all duration-500 ${activeProjectIdx === idx ? "w-10 bg-[#3B82F6] shadow-md" : "w-2.5 bg-white/20 hover:bg-white/40"}`} aria-label={`View project: ${proj.title}`} />
             ))}
           </div>
         </div>
 
         <div className="flex flex-wrap gap-3 mb-8">
           {projects.map((proj, idx) => (
-            <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 border ${activeProjectIdx === idx ? "bg-[#4169FF] border-[#4169FF] text-white shadow-[0_0_20px_rgba(65,105,255,0.4)]" : "bg-[#111827] border-white/[0.06] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white"}`}>
+            <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 border ${activeProjectIdx === idx ? "bg-[#3B82F6] border-[#3B82F6] text-white shadow-md" : "bg-[#162347] border-white/15 text-slate-300 hover:border-blue-400 hover:text-white"}`}>
               {proj.title}
             </button>
           ))}

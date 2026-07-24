@@ -14,7 +14,7 @@ export function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative min-h-screen w-full flex items-center pt-28 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-[#050816] text-white z-10 border-b border-white/10"
+      className="relative min-h-screen w-full flex items-center pt-28 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-[#0E1B38] text-white z-10 border-b border-white/10"
     >
       {/* Background Image - Sharper and clearly visible */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -25,7 +25,7 @@ export function Hero() {
           priority
           className="object-cover object-center opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/75 via-[#050816]/60 to-[#050816]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0E1B38]/75 via-[#0E1B38]/60 to-[#0E1B38]/95" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -36,7 +36,7 @@ export function Hero() {
             
             {/* Eyebrow Pill */}
             <FadeIn direction="down">
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#050816]/90 border border-white/10 text-[#5A7DFF] shadow-lg backdrop-blur-md">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#162347]/90 border border-white/15 text-[#60A5FA] shadow-lg backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-[#10B981]" />
                 <span className="text-[10px] sm:text-xs font-heading font-bold tracking-widest uppercase text-[#F8FAFC]">
                   INFRASTRUCTURE YOU OWN · ZERO SUBSCRIPTIONS
@@ -48,7 +48,7 @@ export function Hero() {
             <FadeIn direction="up" delay={0.1}>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-[#F8FAFC] leading-[1.15] sm:leading-[1.08] text-center lg:text-left">
                 Own your school&apos;s tech. <br className="hidden sm:inline" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F8FAFC] via-[#5A7DFF] to-[#4169FF]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6]">
                   Even the exam system. Even offline.
                 </span>
               </h1>
@@ -56,7 +56,7 @@ export function Hero() {
 
             {/* Subtitle */}
             <FadeIn direction="up" delay={0.2}>
-              <p className="text-sm sm:text-lg text-[#AAB4C5] max-w-2xl leading-relaxed font-normal text-center lg:text-left mx-auto lg:mx-0">
+              <p className="text-sm sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal text-center lg:text-left mx-auto lg:mx-0">
                 Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned forever with zero subscription fees.
               </p>
             </FadeIn>
@@ -67,7 +67,7 @@ export function Hero() {
                 <MagneticButton className="w-full sm:w-auto">
                   <a
                     href="#contact"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#4169FF] hover:bg-[#3451D1] text-white font-heading font-bold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-lg transition-all duration-300 group"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white font-heading font-bold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-lg transition-all duration-300 group"
                   >
                     <span>Contact Us</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -77,7 +77,7 @@ export function Hero() {
                 <MagneticButton className="w-full sm:w-auto">
                   <a
                     href="#offline-cbt"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#050816]/90 hover:bg-[#1A2338] text-[#F8FAFC] font-heading font-semibold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-white/10 backdrop-blur-md transition-all duration-300"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#162347]/90 hover:bg-[#1C2C59] text-[#F8FAFC] font-heading font-semibold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-white/15 backdrop-blur-md transition-all duration-300"
                   >
                     <span>See Offline CBT</span>
                   </a>
@@ -87,7 +87,7 @@ export function Hero() {
 
             {/* Value Guarantees Grid */}
             <FadeIn direction="up" delay={0.4}>
-              <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-medium text-[#AAB4C5] w-full text-center lg:text-left">
+              <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-medium text-slate-300 w-full text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0" />
                   <span>Full Source Code Delivered</span>
@@ -97,7 +97,7 @@ export function Hero() {
                   <span>Zero Recurring SaaS Fees</span>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#4169FF] shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-[#60A5FA] shrink-0" />
                   <span>Tailored for Nigerian Schools</span>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export function Hero() {
           {/* Right Column: Clean Contact Form Container */}
           <div id="contact" className="lg:col-span-5 scroll-mt-28 w-full">
             <FadeIn direction="left" delay={0.2}>
-              <div className="bg-[#050816]/60 border border-white/15 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5 shadow-2xl backdrop-blur-2xl">
+              <div className="bg-[#162347]/70 border border-white/20 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5 shadow-2xl backdrop-blur-2xl">
                 
                 {/* Form Header */}
                 <div className="pb-3 border-b border-white/10 text-center lg:text-left">

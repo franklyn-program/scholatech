@@ -60,9 +60,9 @@ const scholatechTiers: PricingTier[] = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="relative py-28 px-4 sm:px-6 lg:px-8 bg-[#050816] overflow-hidden border-t border-white/10 scroll-mt-20">
+    <section id="pricing" className="relative py-28 px-4 sm:px-6 lg:px-8 bg-[#0E1B38] overflow-hidden border-t border-white/10 scroll-mt-20">
       {/* Ambient background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(65,105,255,0.08)_0%,rgba(5,8,22,0)_70%)] blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.12)_0%,rgba(14,27,56,0)_70%)] blur-[90px] pointer-events-none" />
       
       <div className="relative z-10">
         <CreativePricing tiers={scholatechTiers} />

@@ -29,7 +29,7 @@ function CreativePricing({
     return (
         <div className="w-full max-w-6xl mx-auto px-4">
             <div className="text-center space-y-4 mb-16">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#050816] border border-white/10 text-[#5A7DFF] text-xs font-mono font-bold tracking-widest uppercase">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#162347] border border-white/15 text-[#60A5FA] text-xs font-mono font-bold tracking-widest uppercase">
                     {tag}
                 </div>
                 <div className="relative max-w-3xl mx-auto">
@@ -56,11 +56,11 @@ function CreativePricing({
                     >
                         <div
                             className={cn(
-                                "absolute inset-0 bg-[#050816] dark:bg-[#050816]",
+                                "absolute inset-0 bg-[#162347] dark:bg-[#162347]",
                                 "border-2 border-white/20",
-                                "rounded-2xl shadow-[6px_6px_0px_0px] shadow-[#4169FF]/40",
+                                "rounded-2xl shadow-[6px_6px_0px_0px] shadow-[#3B82F6]/40",
                                 "transition-all duration-300",
-                                "group-hover:shadow-[10px_10px_0px_0px] group-hover:shadow-[#4169FF]",
+                                "group-hover:shadow-[10px_10px_0px_0px] group-hover:shadow-[#3B82F6]",
                                 "group-hover:translate-x-[-3px]",
                                 "group-hover:translate-y-[-3px]",
                                 tier.popular && "border-[#10B981] shadow-[#10B981]/50 group-hover:shadow-[#10B981]"
@@ -71,7 +71,7 @@ function CreativePricing({
                             <div>
                                 {tier.popular && (
                                     <div
-                                        className="absolute -top-3 -right-2 bg-[#10B981] text-[#050816] 
+                                        className="absolute -top-3 -right-2 bg-[#10B981] text-[#0E1B38] 
                                         font-heading font-extrabold px-3 py-1 rounded-full rotate-6 text-xs border-2 border-white shadow-lg"
                                     >
                                         Most Popular!
@@ -83,8 +83,8 @@ function CreativePricing({
                                         className={cn(
                                             "w-12 h-12 rounded-xl mb-4",
                                             "flex items-center justify-center",
-                                            "border-2 border-white/20 bg-[#050816]",
-                                            "text-[#5A7DFF]"
+                                            "border-2 border-white/20 bg-[#0E1B38]",
+                                            "text-[#60A5FA]"
                                         )}
                                     >
                                         {tier.icon}
@@ -92,7 +92,7 @@ function CreativePricing({
                                     <h3 className="font-heading font-extrabold text-2xl text-white mb-1">
                                         {tier.name}
                                     </h3>
-                                    <p className="text-xs text-slate-400 font-sans leading-relaxed">
+                                    <p className="text-xs text-slate-300 font-sans leading-relaxed">
                                         {tier.description}
                                     </p>
                                 </div>
@@ -101,7 +101,7 @@ function CreativePricing({
                                     <span className="text-2xl font-extrabold font-heading text-[#10B981]">
                                         {tier.price}
                                     </span>
-                                    <span className="text-xs text-slate-400 block font-mono mt-0.5">
+                                    <span className="text-xs text-slate-300 block font-mono mt-0.5">
                                         One-time payment · Owned forever
                                     </span>
                                 </div>
@@ -110,7 +110,7 @@ function CreativePricing({
                                     {tier.features.map((feature) => (
                                         <div
                                             key={feature}
-                                            className="flex items-start gap-2.5 text-xs text-slate-300"
+                                            className="flex items-start gap-2.5 text-xs text-slate-200"
                                         >
                                             <div
                                                 className="w-4 h-4 rounded-full border border-[#10B981] 
@@ -132,19 +132,19 @@ function CreativePricing({
                                     "w-full h-12 font-heading font-bold text-xs relative rounded-full",
                                     "border-2 border-white/20",
                                     "transition-all duration-300",
-                                    "shadow-[4px_4px_0px_0px] shadow-[#4169FF]/50",
+                                    "shadow-[4px_4px_0px_0px] shadow-[#3B82F6]/50",
                                     "hover:shadow-[6px_6px_0px_0px]",
                                     "hover:translate-x-[-2px] hover:translate-y-[-2px]",
                                     tier.popular
                                         ? [
-                                              "bg-[#10B981] text-[#050816]",
+                                              "bg-[#10B981] text-[#0E1B38]",
                                               "hover:bg-[#059669]",
                                               "shadow-[#10B981]/50"
                                           ]
                                         : [
-                                              "bg-[#050816]",
+                                              "bg-[#0E1B38]",
                                               "text-white",
-                                              "hover:bg-[#050816]/80"
+                                              "hover:bg-[#0E1B38]/80"
                                           ]
                                 )}
                             >

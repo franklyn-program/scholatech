@@ -21,7 +21,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <SmoothScroll>
-      <div className="flex flex-col min-h-screen bg-[#050816] text-[#F8FAFC] selection:bg-[#4169FF] selection:text-white overflow-x-hidden">
+      <div className="flex flex-col min-h-screen bg-[#0E1B38] text-[#F8FAFC] selection:bg-[#3B82F6] selection:text-white overflow-x-hidden">
         <Navbar />
         <main className="flex-grow relative z-10">
           <Hero />
