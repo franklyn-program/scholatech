@@ -24,7 +24,7 @@ const scholatechTiers: PricingTier[] = [
   {
     name: "School Management System",
     icon: <Zap className="w-6 h-6 text-[#10B981]" />,
-    price: "Starts at ₦300,000 only",
+    price: "Starts at ₦450,000 only",
     description: "Complete operational suite covering admissions, bursary fee tracking, continuous assessment (CA), and report cards.",
     color: "emerald",
     features: [
@@ -42,7 +42,7 @@ const scholatechTiers: PricingTier[] = [
   {
     name: "100% Offline CBT Lab",
     icon: <Server className="w-6 h-6 text-[#5A7DFF]" />,
-    price: "Starts at ₦300,000 only",
+    price: "Starts at ₦450,000 only",
     description: "Bank-grade Computer Based Testing system running 100% offline inside your school computer lab network.",
     color: "indigo",
     features: [

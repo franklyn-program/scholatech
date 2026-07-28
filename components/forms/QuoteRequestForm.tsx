@@ -196,8 +196,8 @@ function QuoteRequestFormInner() {
           className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors"
         >
           <option value="School Website and Portal" className="bg-[#0E1B38] text-white">School Website & Portal (₦150k)</option>
-          <option value="School Management System" className="bg-[#0E1B38] text-white">School Management System (₦300k)</option>
-          <option value="100% Offline CBT Lab" className="bg-[#0E1B38] text-white">100% Offline CBT Lab (₦300k)</option>
+          <option value="School Management System" className="bg-[#0E1B38] text-white">School Management System (₦450k)</option>
+          <option value="100% Offline CBT Lab" className="bg-[#0E1B38] text-white">100% Offline CBT Lab (₦450k)</option>
           <option value="Full Studio Package (Web + SMS + CBT)" className="bg-[#0E1B38] text-white">Full Package (Web + SMS + CBT)</option>
         </select>
       </div>
