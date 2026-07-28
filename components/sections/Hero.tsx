@@ -46,7 +46,7 @@ export function Hero() {
             <FadeIn direction="down">
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#162347]/90 border border-white/15 text-[#60A5FA] shadow-lg backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-[#10B981]" />
-                <span className="text-[10px] sm:text-xs font-heading font-bold tracking-widest uppercase text-[#F8FAFC]">
+                <span className="text-[12px] sm:text-xs font-heading font-bold tracking-widest uppercase text-[#F8FAFC]">
                   INFRASTRUCTURE YOU OWN · ZERO SUBSCRIPTIONS
                 </span>
               </div>
@@ -54,7 +54,7 @@ export function Hero() {
 
             {/* Headline */}
             <FadeIn direction="up" delay={0.1}>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-[#F8FAFC] leading-[1.15] sm:leading-[1.08] text-center lg:text-left">
+              <h1 className="text-[28px] sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-[#F8FAFC] leading-[1.15] sm:leading-[1.08] text-center lg:text-left">
                 Own your school&apos;s tech space and exam system. <br className="hidden md:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6]">
                   Also available offline.
@@ -64,14 +64,14 @@ export function Hero() {
 
             {/* Subtitle */}
             <FadeIn direction="up" delay={0.2}>
-              <p className="text-sm sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal text-center lg:text-left mx-auto lg:mx-0">
+              <p className="text-[11px] sm:text-base md:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal text-center lg:text-left mx-auto lg:mx-0">
                 Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned permanently with zero subscription fees.
               </p>
             </FadeIn>
 
-            {/* Action Buttons */}
-            <FadeIn direction="up" delay={0.3}>
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
+            {/* Action Buttons - 32px spacing (mt-8 / pt-8) */}
+            <FadeIn direction="up" delay={0.3} className="pt-8 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
                 <MagneticButton className="w-full sm:w-auto">
                   <a
                     href="#contact"
