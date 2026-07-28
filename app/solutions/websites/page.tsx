@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/layout/Section";
@@ -6,16 +7,76 @@ import { Paragraph } from "@/components/ui/Paragraph";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { WebsiteShowcase } from "@/components/sections/WebsiteShowcase";
-import { CheckCircle2, Globe, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-export const metadata = {
-  title: "School Websites: Scholatech Studio",
-  description: "Fast, mobile-friendly school websites built for prospective parents and online admission leads. Full domain & system ownership included.",
+export const metadata: Metadata = {
+  title: "School Website Development in Nigeria | High-Converting Admissions Sites",
+  description:
+    "Fast, mobile-responsive school websites built for prospective Nigerian parents & online admissions. 100% custom domain, zero monthly renewal fees.",
+  keywords: [
+    "School website development Nigeria",
+    "School website designer Lagos",
+    "Best school website builder Nigeria",
+    "Private school admission website design",
+  ],
+  openGraph: {
+    title: "School Website Development | Scholatech Studio",
+    description:
+      "Fast, mobile-responsive school websites built to capture prospective parent admission leads in Nigeria.",
+    url: "https://scholatech.com.ng/solutions/websites",
+  },
+  alternates: {
+    canonical: "https://scholatech.com.ng/solutions/websites",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://scholatech.com.ng/solutions/websites/#service",
+      "name": "School Website Development",
+      "serviceType": "Web Design & Development",
+      "provider": {
+        "@id": "https://scholatech.com.ng/#organization"
+      },
+      "areaServed": "Nigeria",
+      "description": "High-converting, mobile-first websites engineered for Nigerian primary and secondary schools."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scholatech.com.ng"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Solutions",
+          "item": "https://scholatech.com.ng/solutions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "School Websites",
+          "item": "https://scholatech.com.ng/solutions/websites"
+        }
+      ]
+    }
+  ]
 };
 
 export default function WebsiteSolutionPage() {
   return (
     <div className="flex flex-col min-h-screen bg-bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="flex-grow pt-28 sm:pt-36 pb-20">
         <Section variant="white">

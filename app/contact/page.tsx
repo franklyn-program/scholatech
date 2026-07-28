@@ -1,17 +1,62 @@
+import { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
 import { ShieldCheck, Mail, MapPin, CheckCircle2 } from "lucide-react";
 import { Suspense } from "react";
 
-export const metadata = {
-  title: "Request a Quote: Scholatech Studio",
-  description: "Get a clear scope and transparent quote for your school website, management system, or CBT lab installation.",
+export const metadata: Metadata = {
+  title: "Request a Scope & Quote | Custom School Tech Solutions",
+  description:
+    "Get a clear scope and transparent proposal for your school website, result portal, or CBT lab installation in Nigeria.",
+  openGraph: {
+    title: "Request a Proposal | Scholatech Studio",
+    description:
+      "Get a clear scope and transparent proposal for your school website, portal, or CBT installation.",
+    url: "https://scholatech.com.ng/contact",
+  },
+  alternates: {
+    canonical: "https://scholatech.com.ng/contact",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://scholatech.com.ng/contact/#webpage",
+      "url": "https://scholatech.com.ng/contact",
+      "name": "Contact & Proposal Request — Scholatech Studio",
+      "description": "Direct scoping form and contact details for Scholatech EdTech Studio."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scholatech.com.ng"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://scholatech.com.ng/contact"
+        }
+      ]
+    }
+  ]
 };
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#050816] text-[#F8FAFC]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="flex-grow pt-28 sm:pt-36 pb-20">
         <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

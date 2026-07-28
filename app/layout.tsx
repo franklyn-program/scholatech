@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://scholatech.com.ng"),
   title: {
     default: "Scholatech — Premium School Tech | Built Once. Owned Permanently.",
-    template: "%s | Scholatech",
+    template: "%s | Scholatech Studio",
   },
   description:
-    "We build school websites, management portals, and 100% offline CBT installations for Nigerian schools. Pay once, 100% system & database ownership, zero subscriptions.",
+    "Custom school management portals, school websites, and 100% offline CBT testing labs for Nigerian schools. Pay once, 100% database & system ownership, zero recurring subscriptions.",
   keywords: [
     "Nigerian school website developer",
     "School management system Nigeria",
@@ -32,10 +32,14 @@ export const metadata: Metadata = {
     "One-time payment school portal",
     "Self-hosted school management software",
     "Scholatech EdTech Studio",
+    "Best school result management software Nigeria",
+    "School portal developer Lagos Nigeria",
+    "Private school software software pricing Nigeria",
   ],
   authors: [{ name: "Scholatech Studio", url: "https://scholatech.com.ng" }],
   creator: "Scholatech Studio",
   publisher: "Scholatech Studio",
+  category: "Technology / Education",
   formatDetection: {
     email: false,
     address: false,
@@ -92,18 +96,32 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#0E1B38",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "WebSite",
+      "@id": "https://scholatech.com.ng/#website",
+      "url": "https://scholatech.com.ng",
+      "name": "Scholatech Studio",
+      "description": "Premium School Tech, Management Portals & Offline CBT Lab Software for Nigerian Schools",
+      "publisher": {
+        "@id": "https://scholatech.com.ng/#organization"
+      },
+      "inLanguage": "en-NG"
+    },
+    {
+      "@type": ["Organization", "EducationalOrganization", "ProfessionalService", "LocalBusiness"],
       "@id": "https://scholatech.com.ng/#organization",
       "name": "Scholatech Studio",
       "url": "https://scholatech.com.ng",
       "logo": "https://scholatech.com.ng/images/logo/logo.png",
+      "image": "https://scholatech.com.ng/images/hero/hero-stitch.png",
       "description": "EdTech studio building school management portals, websites, and offline CBT suites with 100% system & database ownership.",
+      "priceRange": "₦150,000 - ₦450,000",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "NG",
@@ -114,18 +132,24 @@ const jsonLd = {
         "telephone": "+234-812-997-3621",
         "contactType": "customer service",
         "email": "contact@scholatech.com.ng",
-        "availableLanguage": "English"
+        "availableLanguage": ["English"]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Nigeria"
       }
     },
     {
       "@type": "SoftwareApplication",
+      "@id": "https://scholatech.com.ng/#software",
       "name": "Scholatech Offline CBT & School Management Portal",
       "operatingSystem": "Windows, Linux, Web",
       "applicationCategory": "EducationalApplication",
       "offers": {
         "@type": "Offer",
         "price": "150000",
-        "priceCurrency": "NGN"
+        "priceCurrency": "NGN",
+        "availability": "https://schema.org/InStock"
       }
     }
   ]
