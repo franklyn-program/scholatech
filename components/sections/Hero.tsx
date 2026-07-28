@@ -98,7 +98,7 @@ export function Hero() {
               <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-medium text-slate-300 w-full text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0" />
-                  <span>100% System & Database Ownership</span>
+                  <span>Full Transfer of System & Database Ownership</span>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0" />

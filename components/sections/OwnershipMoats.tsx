@@ -120,7 +120,7 @@ export function OwnershipMoats() {
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">Custom websites built to convert prospective parents into enrolled students: 100% mobile-friendly with online admissions forms, campus galleries, and zero monthly hosting lock-in.</p>
             <ul className="space-y-3 pt-2">
               <li className="flex items-center gap-3 text-sm font-semibold text-slate-800"><CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" /><span>Sub-second loading times on mobile networks</span></li>
-              <li className="flex items-center gap-3 text-sm font-semibold text-slate-800"><CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" /><span>Full domain ownership and system deployment handed over</span></li>
+              <li className="flex items-center gap-3 text-sm font-semibold text-slate-800"><CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" /><span>Full transfer of domain & system ownership</span></li>
             </ul>
           </motion.div>
           <motion.div {...fadeUp(0.15)} className="lg:col-span-7 bg-[#F8FAFC] rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xl">

@@ -13,11 +13,11 @@ const projects = [
     client: "Real-World Deployments",
     category: "Website Design & Development",
     glowColor: "rgba(65, 105, 255, 0.25)",
-    description: "Premium, mobile-first school websites built to win trust, drive admissions, and represent your brand. Delivered with full domain & system ownership and zero subscriptions.",
+    description: "Premium, mobile-first school websites built to win trust, drive admissions, and represent your brand. Delivered with full transfer of domain & system ownership and zero subscriptions.",
     outcomes: [
       "ThesisEase.com.ng: Thesis & project writing platform live in production",
       "Royal Rangers Academy (rra.com.ng): School website live and converting",
-      "100% system & database ownership on day of launch",
+      "Full transfer of system & database ownership on day of launch",
     ],
     stats: [
       { label: "Page Load Speed", value: "< 1s" },

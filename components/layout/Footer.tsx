@@ -28,15 +28,15 @@ export function Footer() {
               <Image
                 src="/images/logo/logo.png"
                 alt="Scholatech Logo"
-                width={220}
-                height={55}
-                className="h-7 sm:h-9 md:h-10 w-auto max-w-[150px] sm:max-w-[220px] object-contain filter brightness-0 invert"
+                width={240}
+                height={60}
+                className="h-8 sm:h-10 md:h-11 w-auto max-w-[170px] sm:max-w-[240px] object-contain filter brightness-0 invert"
                 priority
               />
             </Link>
 
             <p className="text-xs text-slate-300 leading-relaxed max-w-sm">
-              Scholatech is a premier EdTech studio building school management portals, websites, and offline CBT suites with 100% system & database ownership.
+              Scholatech is a premier EdTech studio building school management portals, websites, and offline CBT suites with full transfer of system & database ownership.
             </p>
 
             <div className="space-y-3 pt-2 text-xs">

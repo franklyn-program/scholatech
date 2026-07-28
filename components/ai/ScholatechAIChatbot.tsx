@@ -28,7 +28,7 @@ const FAQ_KNOWLEDGE: { keywords: string[]; answer: string; actionUrl?: string; a
   },
   {
     keywords: ["source code", "ownership", "database", "moat", "lock-in"],
-    answer: "Yes! 100% system and database ownership is handed over to your school on day of launch. You own the software infrastructure outright with zero vendor lock-in.",
+    answer: "Yes! Full transfer of system and database ownership is completed for your school on day of launch. You own the software infrastructure outright with zero vendor lock-in.",
     actionUrl: "/#solutions",
     actionText: "See Ownership Model",
   },

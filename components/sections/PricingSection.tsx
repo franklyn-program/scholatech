@@ -11,7 +11,7 @@ const scholatechTiers: PricingTier[] = [
     description: "High-converting, mobile-first website with online application forms and parent result checker portal.",
     color: "blue",
     features: [
-      "Full domain & system ownership",
+      "Full transfer of domain & system ownership",
       "Sub-second loading on 3G/4G networks",
       "Online student application & registration",
       "Parent result lookup portal",
@@ -33,7 +33,7 @@ const scholatechTiers: PricingTier[] = [
       "Bursary & tuition fee tracking + PDF receipts",
       "Multi-portal access (Admin, Teacher, Parent, Bursar)",
       "Bulk SMS & WhatsApp notification integration",
-      "Full database & local system transfer to your server",
+      "Full transfer of system & database ownership to your server",
     ],
     popular: true,
     ctaText: "Contact Us for Management System",
