@@ -28,9 +28,9 @@ export function Footer() {
               <Image
                 src="/images/logo/logo.png"
                 alt="Scholatech Logo"
-                width={242}
-                height={61}
-                className="h-[3.3rem] w-auto object-contain filter brightness-0 invert"
+                width={220}
+                height={55}
+                className="h-7 sm:h-9 md:h-10 w-auto max-w-[150px] sm:max-w-[220px] object-contain filter brightness-0 invert"
                 priority
               />
             </Link>
