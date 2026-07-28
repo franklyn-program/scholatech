@@ -37,8 +37,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="font-heading font-bold text-[#F8FAFC] text-sm block">Direct Email</span>
-                    <a href="mailto:agboseakade1@gmail.com" className="text-[#5A7DFF] font-mono text-xs hover:underline">
-                      agboseakade1@gmail.com
+                    <a href="mailto:contact@scholatech.com.ng" className="text-[#5A7DFF] font-mono text-xs hover:underline">
+                      contact@scholatech.com.ng
                     </a>
                   </div>
                 </div>
@@ -57,10 +57,10 @@ export default function ContactPage() {
               <div className="bg-[#0A1020] border border-[#10B981]/30 p-6 rounded-2xl space-y-3">
                 <div className="font-heading font-bold text-xs uppercase tracking-wider text-[#10B981] flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4" />
-                  100% Source Code Ownership Guarantee
+                  100% System & Database Ownership Guarantee
                 </div>
                 <p className="text-xs text-[#AAB4C5] leading-relaxed">
-                  Every project delivered includes complete repository access, database setup, and staff onboarding. You will never pay a monthly subscription fee.
+                  Every project delivered includes complete local deployment setup, database control, and staff onboarding. You will never pay a monthly subscription fee.
                 </p>
                 <div className="pt-1 flex items-center gap-2 text-[11px] text-[#F8FAFC]">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#10B981]" />

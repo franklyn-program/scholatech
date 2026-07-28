@@ -204,9 +204,9 @@ export function WebsiteShowcase() {
             <div className="w-9 h-9 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h4 className="font-heading font-bold text-base text-deep-navy">Full Source Code Handover</h4>
+            <h4 className="font-heading font-bold text-base text-deep-navy">Full Domain & System Handover</h4>
             <p className="text-xs text-text-slate leading-relaxed">
-              You own your code, domain, and web files completely. No agency holding your school website hostage.
+              You own your system deployment, domain, and web files completely. No agency holding your school website hostage.
             </p>
           </Card>
         </div>

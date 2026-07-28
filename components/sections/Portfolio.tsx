@@ -3,14 +3,8 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { ExternalLink, Code2, ShieldCheck, Laptop } from "lucide-react";
+import { ExternalLink, Code2, ShieldCheck, Laptop, Monitor, Smartphone } from "lucide-react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 const projects = [
   {
@@ -19,16 +13,16 @@ const projects = [
     client: "Real-World Deployments",
     category: "Website Design & Development",
     glowColor: "rgba(65, 105, 255, 0.25)",
-    description: "Premium, mobile-first school websites built to win trust, drive admissions, and represent your brand. Delivered with full source code and zero subscriptions.",
+    description: "Premium, mobile-first school websites built to win trust, drive admissions, and represent your brand. Delivered with full domain & system ownership and zero subscriptions.",
     outcomes: [
       "ThesisEase.com.ng: Thesis & project writing platform live in production",
       "Royal Rangers Academy (rra.com.ng): School website live and converting",
-      "100% source code ownership on day of launch",
+      "100% system & database ownership on day of launch",
     ],
     stats: [
       { label: "Page Load Speed", value: "< 1s" },
       { label: "Recurring License", value: "Zero" },
-      { label: "Source Code", value: "Fully Delivered" },
+      { label: "System Control", value: "Fully Owned" },
     ],
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
     liveUrls: [
@@ -56,8 +50,8 @@ const projects = [
     ],
     stats: [
       { label: "Result Speed", value: "99% Faster" },
-      { label: "Subscription", value: "Zero Forever" },
-      { label: "Source Code", value: "Fully Delivered" },
+      { label: "Subscription", value: "Zero Fees" },
+      { label: "Database Control", value: "Fully Owned" },
     ],
     techStack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript", "Tailwind CSS"],
     liveUrls: [],
@@ -84,7 +78,7 @@ const projects = [
     stats: [
       { label: "Internet Required", value: "0%" },
       { label: "Grading Speed", value: "Instant" },
-      { label: "Source Code", value: "Fully Delivered" },
+      { label: "Deployment", value: "Self-Hosted" },
     ],
     techStack: ["React", "Electron", "SQLite", "Node.js", "Express"],
     liveUrls: [],
@@ -98,6 +92,7 @@ const projects = [
   },
 ];
 
+/** Lightweight auto-rotating slideshow hook */
 function useSlideshow(slides: string[], intervalMs = 5000) {
   const [slideIdx, setSlideIdx] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -120,6 +115,7 @@ function useSlideshow(slides: string[], intervalMs = 5000) {
   return { slideIdx, setSlideIdx, reset };
 }
 
+/** Inner screen content — shared by all device frames */
 function DeviceScreen({
   project, slideIdx, setSlideIdx, reset,
 }: {
@@ -136,7 +132,7 @@ function DeviceScreen({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
           className="absolute inset-0"
         >
           <Image
@@ -147,10 +143,11 @@ function DeviceScreen({
             priority={slideIdx === 0}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050816]/25 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050816]/20 pointer-events-none" />
         </motion.div>
       </AnimatePresence>
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+      {/* Slide dots */}
+      <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {project.slides.map((_, i) => (
           <button
             key={i}
@@ -166,212 +163,221 @@ function DeviceScreen({
   );
 }
 
+/** Laptop device frame — primary showcase device */
 function LaptopFrame({ project, slideIdx, setSlideIdx, reset }: { project: (typeof projects)[0]; slideIdx: number; setSlideIdx: (i: number) => void; reset: () => void; }) {
   return (
-    <div className="relative w-full max-w-[680px]">
-      <div className="relative mx-auto rounded-t-2xl bg-[#162347] p-3 border-t-2 border-x-2 border-white/20 shadow-2xl">
-        <div className="w-2 h-2 rounded-full bg-white/30 mx-auto mb-2" />
+    <div className="relative w-full max-w-[620px] mx-auto">
+      {/* Screen bezel */}
+      <div className="relative mx-auto rounded-t-2xl bg-[#162347] p-2.5 sm:p-3 border-t-2 border-x-2 border-white/20 shadow-2xl">
+        {/* Camera dot */}
+        <div className="w-2 h-2 rounded-full bg-white/30 mx-auto mb-1.5" />
+        {/* Screen */}
         <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden border border-white/10">
           <DeviceScreen project={project} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
         </div>
       </div>
-      <div className="relative mx-auto h-4 w-[108%] -ml-[4%] rounded-b-xl bg-gradient-to-b from-[#1E293B] to-[#162347] border-t border-white/20 shadow-2xl flex items-center justify-center">
-        <div className="w-16 h-1 rounded-full bg-white/30" />
+      {/* Keyboard base / hinge */}
+      <div className="relative mx-auto h-3.5 w-[108%] -ml-[4%] rounded-b-xl bg-gradient-to-b from-[#1E293B] to-[#162347] border-t border-white/20 shadow-2xl flex items-center justify-center">
+        <div className="w-14 h-0.5 rounded-full bg-white/30" />
+      </div>
+      {/* Device label */}
+      <div className="flex items-center justify-center gap-1.5 mt-3">
+        <Monitor className="w-3 h-3 text-[#5A7DFF]" />
+        <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-[#5A7DFF]">Desktop View</span>
       </div>
     </div>
   );
 }
 
-function TabletFrame({ project, slideIdx, setSlideIdx, reset }: { project: (typeof projects)[0]; slideIdx: number; setSlideIdx: (i: number) => void; reset: () => void; }) {
-  return (
-    <div className="relative w-full max-w-[380px] mx-auto">
-      <div className="relative rounded-[2rem] bg-[#162347] border-4 border-white/20 shadow-2xl p-3">
-        <div className="flex justify-center mb-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-white/30" />
-        </div>
-        <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden border border-white/10">
-          <DeviceScreen project={project} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
-        </div>
-        <div className="flex justify-center mt-3">
-          <div className="w-12 h-1 rounded-full bg-white/30" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
+/** Phone device frame — secondary companion device */
 function PhoneFrame({ project, slideIdx, setSlideIdx, reset }: { project: (typeof projects)[0]; slideIdx: number; setSlideIdx: (i: number) => void; reset: () => void; }) {
   return (
-    <div className="relative w-full max-w-[220px] mx-auto">
-      <div className="relative rounded-[2.5rem] bg-[#162347] border-4 border-white/20 shadow-2xl p-2.5">
-        <div className="flex justify-center mb-1.5">
-          <div className="w-16 h-4 rounded-full bg-[#0E1B38] border border-white/15 flex items-center justify-center gap-1.5 px-3">
-            <div className="w-1.5 h-1.5 rounded-full bg-white/30" />
-            <div className="flex-1 h-1 rounded-full bg-white/20" />
+    <div className="relative w-full max-w-[240px] mx-auto">
+      <div className="relative rounded-[2rem] overflow-hidden border border-white/15 shadow-2xl bg-[#0E1B38]">
+        {/* Notch */}
+        <div className="flex justify-center py-2 bg-[#162347]/60 border-b border-white/10">
+          <div className="w-12 h-2.5 rounded-full bg-[#0E1B38] border border-white/15 flex items-center justify-center gap-1 px-2">
+            <div className="w-1 h-1 rounded-full bg-white/30" />
+            <div className="flex-1 h-0.5 rounded-full bg-white/20" />
           </div>
         </div>
-        <div className="relative aspect-[9/16] w-full rounded-2xl overflow-hidden border border-white/10">
+        {/* Screen */}
+        <div className="relative aspect-[9/16] w-full">
           <DeviceScreen project={project} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
         </div>
-        <div className="flex justify-center mt-2">
-          <div className="w-10 h-1 rounded-full bg-white/30" />
-        </div>
+      </div>
+      {/* Device label */}
+      <div className="flex items-center justify-center gap-1.5 mt-3">
+        <Smartphone className="w-3 h-3 text-[#10B981]" />
+        <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-[#10B981]">Mobile View</span>
       </div>
     </div>
   );
 }
+
 
 export function Portfolio() {
   const [activeProjectIdx, setActiveProjectIdx] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
   const activeProject = projects[activeProjectIdx];
   const { slideIdx, setSlideIdx, reset } = useSlideshow(activeProject.slides, 5000);
 
+  // Reset slideshow when project changes
   useEffect(() => { reset(); }, [activeProjectIdx, reset]);
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced || !containerRef.current) return;
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top",
-        end: `+=${projects.length * window.innerHeight}`,
-        pin: true,
-        scrub: 0.8,
-        onUpdate: (self) => {
-          const idx = Math.min(Math.floor(self.progress * projects.length), projects.length - 1);
-          setActiveProjectIdx(idx);
-        },
-      });
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
 
   return (
     <section
       id="case-studies"
-      ref={containerRef}
-      className="relative w-full min-h-screen bg-[#0E1B38] py-14 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-white/10 flex items-center"
+      className="relative w-full bg-[#0E1B38] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-white/10"
     >
+      {/* Ambient glow */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-25 transition-all duration-1000"
-        style={{ background: `radial-gradient(circle at 50% 40%, ${activeProject.glowColor} 0%, rgba(14,27,56,0) 70%)` }}
+        className="absolute inset-0 pointer-events-none opacity-30 transition-all duration-700"
+        style={{ background: `radial-gradient(circle at 35% 45%, ${activeProject.glowColor} 0%, rgba(14,27,56,0) 65%)` }}
       />
 
-      <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 flex-col gap-4 z-20">
-        {projects.map((proj, idx) => (
-          <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} aria-label={`View ${proj.title}`} className="group flex items-center gap-2.5">
-            <div className={`w-1 rounded-full transition-all duration-500 ${activeProjectIdx === idx ? "h-10 bg-[#3B82F6] shadow-md" : "h-4 bg-white/20 group-hover:bg-white/40"}`} />
-            <span className={`text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${activeProjectIdx === idx ? "text-[#60A5FA] opacity-100" : "text-slate-400 opacity-0 group-hover:opacity-60"}`}>
-              {proj.title}
-            </span>
-          </button>
-        ))}
-      </div>
-
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#162347] border border-white/15 text-[#60A5FA] text-[11px] font-bold tracking-widest uppercase mb-3">
               <Laptop className="w-3.5 h-3.5 text-[#3B82F6]" />
-              Keynote Presentation - Real Projects
+              Keynote Presentation — Real Projects
             </div>
             <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#F8FAFC] tracking-tight">Real outcomes in schools like yours.</h2>
           </div>
-          <div className="flex items-center gap-3">
-            {projects.map((proj, idx) => (
-              <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} className={`h-2.5 rounded-full transition-all duration-500 ${activeProjectIdx === idx ? "w-10 bg-[#3B82F6] shadow-md" : "w-2.5 bg-white/20 hover:bg-white/40"}`} aria-label={`View project: ${proj.title}`} />
-            ))}
-          </div>
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-8">
+        {/* Project Tab Switcher */}
+        <div className="flex flex-wrap gap-3 mb-10">
           {projects.map((proj, idx) => (
-            <button key={proj.id} onClick={() => setActiveProjectIdx(idx)} className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 border ${activeProjectIdx === idx ? "bg-[#3B82F6] border-[#3B82F6] text-white shadow-md" : "bg-[#162347] border-white/15 text-slate-300 hover:border-blue-400 hover:text-white"}`}>
+            <button
+              key={proj.id}
+              onClick={() => setActiveProjectIdx(idx)}
+              className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 border ${
+                activeProjectIdx === idx
+                  ? "bg-[#3B82F6] border-[#3B82F6] text-white shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+                  : "bg-[#162347] border-white/15 text-slate-300 hover:border-blue-400 hover:text-white"
+              }`}
+            >
               {proj.title}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 flex justify-center">
-            <div className="hidden lg:flex w-full justify-center">
-              <LaptopFrame project={activeProject} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
-            </div>
-            <div className="hidden md:flex lg:hidden w-full justify-center">
-              <TabletFrame project={activeProject} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
-            </div>
-            <div className="flex md:hidden w-full justify-center">
-              <PhoneFrame project={activeProject} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
-            </div>
-          </div>
+        {/* Main Content: Devices + Project Details */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeProject.id}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* ============================================= */}
+            {/* MOBILE LAYOUT: Phone frame ABOVE text content */}
+            {/* ============================================= */}
+            <div className="lg:hidden space-y-8">
+              {/* Phone device — full width, first thing seen */}
+              <div className="flex justify-center">
+                <PhoneFrame project={activeProject} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
+              </div>
 
-          <div className="lg:col-span-5">
-            <AnimatePresence mode="wait">
-              <motion.div key={activeProject.id} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.45 }} className="space-y-6">
-                <div className="space-y-1">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#5A7DFF]">{activeProject.client}</span>
-                  <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#F8FAFC]">{activeProject.title}</h3>
+              {/* Text content below phone on mobile */}
+              <ProjectDetails project={activeProject} />
+            </div>
+
+            {/* DESKTOP LAYOUT: Laptop left, text right */}
+            <div className="hidden lg:grid lg:grid-cols-12 gap-10 items-start">
+
+              {/* Left: Laptop */}
+              <div className="lg:col-span-7 flex justify-center">
+                <div className="w-full max-w-[620px]">
+                  <LaptopFrame project={activeProject} slideIdx={slideIdx} setSlideIdx={setSlideIdx} reset={reset} />
                 </div>
-                <p className="text-sm text-[#AAB4C5] leading-relaxed">{activeProject.description}</p>
-                <div className="space-y-2.5 pt-1">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">Key Outcomes:</h4>
-                  {activeProject.outcomes.map((out) => (
-                    <div key={out} className="flex items-start gap-2.5 text-xs text-[#AAB4C5]">
-                      <ShieldCheck className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
-                      <span>{out}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-3 gap-3 pt-1">
-                  {activeProject.stats.map((st) => (
-                    <div key={st.label} className="p-3 rounded-lg bg-[#0A1020] border border-white/[0.06]">
-                      <div className="text-base font-extrabold text-[#5A7DFF]">{st.value}</div>
-                      <div className="text-[9px] text-[#7A879C] uppercase mt-0.5">{st.label}</div>
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#7A879C] mb-2">Technology Stack:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {activeProject.techStack.map((tech) => (
-                      <span key={tech} className="px-2.5 py-1 rounded-md bg-[#111827] border border-white/[0.06] text-[11px] text-[#AAB4C5] font-mono">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="pt-2 flex flex-wrap items-center gap-3">
-                  {activeProject.liveUrls.length > 0 ? (
-                    activeProject.liveUrls.map((url) => (
-                      <MagneticButton key={url.href}>
-                        <a href={url.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#4169FF] hover:bg-[#6D8DFF] text-white font-heading font-bold text-xs px-5 py-3 rounded-full shadow-[0_0_20px_rgba(65,105,255,0.35)] transition-all">
-                          <span>Visit {url.label}</span>
-                          <ExternalLink className="w-3.5 h-3.5" />
-                        </a>
-                      </MagneticButton>
-                    ))
-                  ) : (
-                    <MagneticButton>
-                      <a href="#contact" className="inline-flex items-center gap-2 bg-[#4169FF] hover:bg-[#6D8DFF] text-white font-heading font-bold text-xs px-5 py-3 rounded-full shadow-[0_0_20px_rgba(65,105,255,0.35)] transition-all">
-                        <span>Request Demo</span>
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
-                    </MagneticButton>
-                  )}
-                  <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#111827] border border-white/[0.06] text-xs font-semibold text-[#AAB4C5]">
-                    <Code2 className="w-3.5 h-3.5 text-[#10B981]" />
-                    <span>Delivered to Proprietor</span>
-                  </div>
-                </div>
-                <p className="text-[10px] text-[#7A879C] tracking-widest uppercase flex items-center gap-1.5">
-                  <span className="inline-block w-4 h-px bg-[#7A879C]" />
-                  Scroll to see next project
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
+              </div>
+
+              {/* Right: Project details */}
+              <div className="lg:col-span-5">
+                <ProjectDetails project={activeProject} />
+              </div>
+
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
+  );
+}
+
+/** Extracted project details panel — shared between mobile and desktop layouts */
+function ProjectDetails({ project }: { project: (typeof projects)[0] }) {
+  return (
+    <div className="space-y-5">
+      {/* Title */}
+      <div className="space-y-1">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#5A7DFF]">{project.client}</span>
+        <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#F8FAFC]">{project.title}</h3>
+      </div>
+
+      {/* Description */}
+      <p className="text-sm text-[#AAB4C5] leading-relaxed">{project.description}</p>
+
+      {/* Outcomes */}
+      <div className="space-y-2.5">
+        <h4 className="text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">Key Outcomes:</h4>
+        {project.outcomes.map((out) => (
+          <div key={out} className="flex items-start gap-2.5 text-xs text-[#AAB4C5]">
+            <ShieldCheck className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
+            <span>{out}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-3">
+        {project.stats.map((st) => (
+          <div key={st.label} className="p-3 rounded-lg bg-[#0A1020] border border-white/[0.06]">
+            <div className="text-base font-extrabold text-[#5A7DFF]">{st.value}</div>
+            <div className="text-[9px] text-[#7A879C] uppercase mt-0.5">{st.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Tech Stack */}
+      <div>
+        <h4 className="text-xs font-bold uppercase tracking-wider text-[#7A879C] mb-2">Technology Stack:</h4>
+        <div className="flex flex-wrap gap-2">
+          {project.techStack.map((tech) => (
+            <span key={tech} className="px-2.5 py-1 rounded-md bg-[#111827] border border-white/[0.06] text-[11px] text-[#AAB4C5] font-mono">{tech}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA buttons */}
+      <div className="pt-2 flex flex-wrap items-center gap-3">
+        {project.liveUrls.length > 0 ? (
+          project.liveUrls.map((url) => (
+            <MagneticButton key={url.href}>
+              <a href={url.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#4169FF] hover:bg-[#6D8DFF] text-white font-heading font-bold text-xs px-5 py-3 rounded-full shadow-[0_0_20px_rgba(65,105,255,0.35)] transition-all">
+                <span>Visit {url.label}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </MagneticButton>
+          ))
+        ) : (
+          <MagneticButton>
+            <a href="#contact" className="inline-flex items-center gap-2 bg-[#4169FF] hover:bg-[#6D8DFF] text-white font-heading font-bold text-xs px-5 py-3 rounded-full shadow-[0_0_20px_rgba(65,105,255,0.35)] transition-all">
+              <span>Request Demo</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </MagneticButton>
+        )}
+        <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#111827] border border-white/[0.06] text-xs font-semibold text-[#AAB4C5]">
+          <Code2 className="w-3.5 h-3.5 text-[#10B981]" />
+          <span>Delivered to Proprietor</span>
+        </div>
+      </div>
+    </div>
   );
 }

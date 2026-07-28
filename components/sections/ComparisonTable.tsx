@@ -5,9 +5,9 @@ import { Check, X } from "lucide-react";
 
 const rows = [
   { feature: "Payment Model", typical: "Monthly/annual subscription", scholatech: "One-time payment" },
-  { feature: "Access after you stop paying", typical: "Lost instantly", scholatech: "Yours forever" },
-  { feature: "Source code", typical: "Closed & locked", scholatech: "Delivered to you" },
-  { feature: "Customization", typical: "Limited by vendor", scholatech: "Fully yours to modify" },
+  { feature: "Access after deployment", typical: "Subject to recurring fees", scholatech: "Yours permanently" },
+  { feature: "System & Database control", typical: "Closed & locked SaaS", scholatech: "Self-hosted & fully controlled" },
+  { feature: "Customization", typical: "Limited by vendor", scholatech: "Fully tailored to your school" },
   { feature: "Long-term cost", typical: "Compounds every year", scholatech: "Fixed. Done." },
 ];
 

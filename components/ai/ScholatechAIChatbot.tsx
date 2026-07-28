@@ -28,13 +28,13 @@ const FAQ_KNOWLEDGE: { keywords: string[]; answer: string; actionUrl?: string; a
   },
   {
     keywords: ["source code", "ownership", "database", "moat", "lock-in"],
-    answer: "Yes! 100% source code and database ownership is handed over to your school on day of launch. You own the infrastructure outright with zero vendor lock-in.",
+    answer: "Yes! 100% system and database ownership is handed over to your school on day of launch. You own the software infrastructure outright with zero vendor lock-in.",
     actionUrl: "/#solutions",
     actionText: "See Ownership Model",
   },
   {
     keywords: ["contact", "email", "phone", "quote", "architect", "demo", "reach"],
-    answer: "You can reach our Lead Architect directly at agboseakade1@gmail.com or fill out our online scoping form to receive a custom proposal within 24 hours.",
+    answer: "You can reach our Lead Architect directly at contact@scholatech.com.ng or fill out our online scoping form to receive a custom proposal within 24 hours.",
     actionUrl: "/contact",
     actionText: "Request Custom Scope",
   },
@@ -86,7 +86,7 @@ export function ScholatechAIChatbot() {
 
       let botResponse = matched
         ? matched.answer
-        : "Thank you for asking! For custom school requirements or direct quotes, you can email us directly at agboseakade1@gmail.com or request a scope online.";
+        : "Thank you for asking! For custom school requirements or direct quotes, you can email us directly at contact@scholatech.com.ng or request a scope online.";
 
       const botMsg: Message = {
         id: (Date.now() + 1).toString(),
@@ -227,10 +227,10 @@ export function ScholatechAIChatbot() {
                 Pricing details?
               </button>
               <button
-                onClick={() => handleSend("Do we get the source code?")}
+                onClick={() => handleSend("Do we get full system ownership?")}
                 className="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#050816] border border-white/10 text-[10px] text-[#AAB4C5] hover:border-[#4169FF]/40 hover:text-white transition-colors"
               >
-                Source Code?
+                System Ownership?
               </button>
             </div>
 
@@ -243,7 +243,7 @@ export function ScholatechAIChatbot() {
             >
               <input
                 type="text"
-                placeholder="Ask about CBT, pricing, source code..."
+                placeholder="Ask about CBT, pricing, system ownership..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 className="flex-grow px-3.5 py-2.5 rounded-xl bg-[#050816] border border-white/10 text-xs text-[#F8FAFC] focus:outline-none focus:border-[#4169FF] transition-colors placeholder:text-[#7A879C]"

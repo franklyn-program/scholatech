@@ -25,7 +25,7 @@ understands their specific operational pain (admissions, fees, results,
 communication with parents) and that paying once for ownership beats paying
 forever for access.
 
-**Positioning line:** "Built once. Owned forever."
+**Positioning line:** "Built once. Owned permanently."
 
 ---
 
@@ -137,9 +137,9 @@ than inventing content.
 
 ### 5.2 Hero
 - Eyebrow: `One-time payment · Full ownership`
-- H1: **Premium school tech, built once, owned forever.**
+- H1: **Own your school's tech space and exam system. Also available offline.**
 - Subhead: "We build websites, management systems, and CBT installations for
-  Nigerian schools. Pay once, get the full source code, and never pay a
+  Nigerian schools. Pay once, 100% system & database ownership, and never pay a
   subscription again."
 - Primary CTA: **Get a quote** · Secondary: **See how it works** (scrolls to §5.4)
 - Keep it text-led. No stock imagery, no cluttered collage.

@@ -19,18 +19,18 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://scholatech.com.ng"),
   title: {
-    default: "Scholatech — Premium School Tech | Built Once. Owned Forever.",
+    default: "Scholatech — Premium School Tech | Built Once. Owned Permanently.",
     template: "%s | Scholatech",
   },
   description:
-    "We build school websites, management portals, and 100% offline CBT installations for Nigerian schools. Pay once, get full source code, zero subscriptions.",
+    "We build school websites, management portals, and 100% offline CBT installations for Nigerian schools. Pay once, 100% system & database ownership, zero subscriptions.",
   keywords: [
     "Nigerian school website developer",
     "School management system Nigeria",
     "Offline CBT software for schools",
     "WAEC JAMB mock CBT lab installation",
     "One-time payment school portal",
-    "Source code ownership school software",
+    "Self-hosted school management software",
     "Scholatech EdTech Studio",
   ],
   authors: [{ name: "Scholatech Studio", url: "https://scholatech.com.ng" }],
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     apple: "/images/logo/logo.png",
   },
   openGraph: {
-    title: "Scholatech — Premium School Tech | Built Once. Owned Forever.",
+    title: "Scholatech — Premium School Tech | Built Once. Owned Permanently.",
     description:
-      "Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned forever.",
+      "Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned permanently.",
     url: "https://scholatech.com.ng",
     siteName: "Scholatech Studio",
     images: [
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scholatech — Premium School Tech | Built Once. Owned Forever.",
+    title: "Scholatech — Premium School Tech | Built Once. Owned Permanently.",
     description:
-      "Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Pay once, owned forever.",
+      "Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Pay once, owned permanently.",
     images: ["/images/hero/hero-stitch.png"],
   },
   robots: {
@@ -103,7 +103,7 @@ const jsonLd = {
       "name": "Scholatech Studio",
       "url": "https://scholatech.com.ng",
       "logo": "https://scholatech.com.ng/images/logo/logo.png",
-      "description": "EdTech studio building school management portals, websites, and offline CBT suites with 100% source code ownership.",
+      "description": "EdTech studio building school management portals, websites, and offline CBT suites with 100% system & database ownership.",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "NG",
@@ -113,7 +113,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         "telephone": "+234-812-997-3621",
         "contactType": "customer service",
-        "email": "agboseakade1@gmail.com",
+        "email": "contact@scholatech.com.ng",
         "availableLanguage": "English"
       }
     },

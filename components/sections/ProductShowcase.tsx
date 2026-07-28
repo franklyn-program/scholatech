@@ -89,7 +89,7 @@ export function ProductShowcase() {
         <FadeIn direction="up" delay={0.3}>
           <div className="text-center pt-4">
             <Paragraph size="sm" className="text-slate-400 font-medium">
-              Every product: one payment, source code included, nothing recurring.
+              Every product: one payment, full system ownership, nothing recurring.
             </Paragraph>
           </div>
         </FadeIn>

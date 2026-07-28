@@ -33,11 +33,11 @@ export function PricingTeaser() {
           <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm max-w-xl mx-auto space-y-6">
             <div className="flex items-center justify-center gap-2 text-accent-green font-bold text-sm">
               <ShieldCheck className="w-5 h-5" />
-              <span>Includes Full Source Code & Database</span>
+              <span>Includes 100% System & Database Ownership</span>
             </div>
 
             <p className="text-sm text-slate-600 leading-relaxed">
-              No per-student fees. No monthly recurring charges. You pay once for development and deployment, and your school owns the software forever.
+              No per-student fees. No monthly recurring charges. You pay once for development and deployment, and your school owns the software permanently.
             </p>
 
             <div className="pt-2">

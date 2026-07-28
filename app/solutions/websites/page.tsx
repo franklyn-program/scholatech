@@ -10,7 +10,7 @@ import { CheckCircle2, Globe, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "School Websites: Scholatech Studio",
-  description: "Fast, mobile-friendly school websites built for prospective parents and online admission leads. Full source code included.",
+  description: "Fast, mobile-friendly school websites built for prospective parents and online admission leads. Full domain & system ownership included.",
 };
 
 export default function WebsiteSolutionPage() {

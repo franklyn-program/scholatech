@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipient = "agboseakade1@gmail.com";
+    const recipient = "contact@scholatech.com.ng";
 
     // 1. Insert into Supabase quote_requests table
     try {

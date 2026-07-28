@@ -17,8 +17,8 @@ interface PricingTier {
 
 function CreativePricing({
     tag = "100% Ownership · Zero Subscription Tax",
-    title = "Investment built once. Owned forever.",
-    description = "We don't charge per student or per month. Every package includes custom engineering, full source code delivery, database setup, and staff onboarding.",
+    title = "Investment built once. Owned permanently.",
+    description = "We don't charge per student or per month. Every package includes custom engineering, complete self-hosted deployment, database setup, and staff onboarding.",
     tiers,
 }: {
     tag?: string;
@@ -102,7 +102,7 @@ function CreativePricing({
                                         {tier.price}
                                     </span>
                                     <span className="text-xs text-slate-300 block font-mono mt-0.5">
-                                        One-time payment · Owned forever
+                                        One-time payment · Owned permanently
                                     </span>
                                 </div>
 

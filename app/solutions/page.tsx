@@ -9,7 +9,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata = {
   title: "Solutions & Products: Scholatech Studio",
-  description: "Explore our 3 core products: School Websites, Management Portals, and CBT Lab Software. Built once, owned forever.",
+  description: "Explore our 3 core products: School Websites, Management Portals, and CBT Lab Software. Built once, owned permanently.",
 };
 
 export default function SolutionsPage() {
@@ -24,7 +24,7 @@ export default function SolutionsPage() {
               Engineering solutions for modern Nigerian schools.
             </Heading>
             <Paragraph size="lg">
-              Whether you need a high-converting school website, an all-in-one portal for fees and results, or an offline CBT testing lab, we build and deliver the full source code.
+              Whether you need a high-converting school website, an all-in-one portal for fees and results, or an offline CBT testing lab, we deploy complete system and database ownership.
             </Paragraph>
           </div>
         </Section>

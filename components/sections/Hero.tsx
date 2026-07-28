@@ -7,6 +7,14 @@ import { MagneticButton } from "@/components/ui/MagneticButton";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
 import { ShieldCheck, CheckCircle2, ArrowRight, MessageSquare } from "lucide-react";
 
+function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662a11.87 11.87 0 005.71 1.454h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.488-8.413z" />
+    </svg>
+  );
+}
+
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -47,9 +55,9 @@ export function Hero() {
             {/* Headline */}
             <FadeIn direction="up" delay={0.1}>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-[#F8FAFC] leading-[1.15] sm:leading-[1.08] text-center lg:text-left">
-                Own your school&apos;s tech. <br className="hidden sm:inline" />
+                Own your school&apos;s tech space and exam system. <br className="hidden md:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6]">
-                  Even the exam system. Even offline.
+                  Also available offline.
                 </span>
               </h1>
             </FadeIn>
@@ -57,7 +65,7 @@ export function Hero() {
             {/* Subtitle */}
             <FadeIn direction="up" delay={0.2}>
               <p className="text-sm sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal text-center lg:text-left mx-auto lg:mx-0">
-                Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned forever with zero subscription fees.
+                Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned permanently with zero subscription fees.
               </p>
             </FadeIn>
 
@@ -90,7 +98,7 @@ export function Hero() {
               <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-medium text-slate-300 w-full text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0" />
-                  <span>Full Source Code Delivered</span>
+                  <span>100% System & Database Ownership</span>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0" />
@@ -108,7 +116,7 @@ export function Hero() {
           {/* Right Column: Clean Contact Form Container */}
           <div id="contact" className="lg:col-span-5 scroll-mt-28 w-full">
             <FadeIn direction="left" delay={0.2}>
-              <div className="bg-[#162347]/70 border border-white/20 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5 shadow-2xl backdrop-blur-2xl">
+              <div className="bg-[#0E1B38]/30 border border-white/5 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5 shadow-2xl backdrop-blur-md">
                 
                 {/* Form Header with WhatsApp Icon */}
                 <div className="pb-3 border-b border-white/10 flex items-center justify-between">
@@ -126,9 +134,9 @@ export function Hero() {
                     rel="noopener noreferrer"
                     title="Chat on WhatsApp"
                     aria-label="Chat on WhatsApp"
-                    className="w-10 h-10 rounded-full bg-[#10B981] hover:bg-[#059669] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-all shrink-0 ml-3"
+                    className="w-10 h-10 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-all shrink-0 ml-3"
                   >
-                    <MessageSquare className="w-5 h-5" />
+                    <WhatsAppIcon className="w-5 h-5" />
                   </a>
                 </div>
 

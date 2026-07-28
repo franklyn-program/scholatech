@@ -16,10 +16,10 @@ export function Numbers() {
                 Guaranteed Ownership Policy
               </div>
               <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-white">
-                100% Source Code Ownership
+                100% System & Database Ownership
               </h3>
               <p className="text-sm text-slate-400">
-                You receive every line of code, repository access, and database migration script on final delivery.
+                You receive full system deployment, database control, and local server setup on final delivery.
               </p>
             </div>
 

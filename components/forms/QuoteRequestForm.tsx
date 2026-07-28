@@ -129,7 +129,7 @@ function QuoteRequestFormInner() {
             placeholder="e.g. Dr. Frank Okonjo"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
 
@@ -145,7 +145,7 @@ function QuoteRequestFormInner() {
             placeholder="e.g. Royal Rangers Academy"
             value={formData.school_name}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
       </div>
@@ -163,7 +163,7 @@ function QuoteRequestFormInner() {
             placeholder="e.g. admin@school.edu.ng"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
 
@@ -179,7 +179,7 @@ function QuoteRequestFormInner() {
             placeholder="e.g. +234 803 000 0000"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
           />
         </div>
       </div>
@@ -193,7 +193,7 @@ function QuoteRequestFormInner() {
           name="service_needed"
           value={formData.service_needed}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors"
         >
           <option value="School Website and Portal" className="bg-[#0E1B38] text-white">School Website & Portal (₦150k)</option>
           <option value="School Management System" className="bg-[#0E1B38] text-white">School Management System (₦300k)</option>
@@ -213,7 +213,7 @@ function QuoteRequestFormInner() {
           placeholder="Student count, current setup, target launch date..."
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#0E1B38]/70 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-white/15 bg-[#050B18]/45 backdrop-blur-md text-[#F8FAFC] text-xs focus:outline-none focus:border-[#3B82F6] transition-colors placeholder:text-slate-400"
         ></textarea>
       </div>
 

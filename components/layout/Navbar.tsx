@@ -23,9 +23,9 @@ export function Navbar() {
         <Image
           src="/images/logo/logo.png"
           alt="Scholatech Logo"
-          width={220}
-          height={55}
-          className="h-10 sm:h-12 md:h-14 w-auto max-w-[200px] sm:max-w-[260px] md:max-w-[300px] object-contain filter brightness-0 invert drop-shadow-[0_2px_12px_rgba(255,255,255,0.25)] transition-transform group-hover:scale-105"
+          width={330}
+          height={83}
+          className="h-13 sm:h-[3.85rem] md:h-[5rem] w-auto max-w-[264px] sm:max-w-[330px] md:max-w-[396px] object-contain filter brightness-0 invert drop-shadow-[0_2px_12px_rgba(255,255,255,0.25)] transition-transform group-hover:scale-105"
           priority
         />
       </Link>

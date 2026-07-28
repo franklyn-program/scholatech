@@ -13,9 +13,9 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 
 export const metadata = {
-  title: "Scholatech: Own Your School Tech. Even Offline.",
+  title: "Scholatech: Own Your School Tech Space & Exam System",
   description:
-    "Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned forever with zero subscription fees.",
+    "Custom school management portals and 100% offline CBT infrastructure for Nigerian schools. Built once on your hardware, owned permanently with zero subscription fees.",
 };
 
 export default function HomePage() {

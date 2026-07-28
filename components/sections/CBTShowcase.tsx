@@ -194,7 +194,7 @@ export function CBTShowcase() {
             </div>
             <h4 className="font-heading font-bold text-base text-emerald-950">One-Time Ownership</h4>
             <p className="text-xs text-emerald-800/80 leading-relaxed">
-              Full installation with source code and local server license. No recurring per-student subscription fees.
+              Full installation with self-hosted deployment and local server license. No recurring per-student subscription fees.
             </p>
           </Card>
         </div>
