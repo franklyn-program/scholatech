@@ -106,7 +106,7 @@ export function OfflineCBTDeepDive() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="p-6 sm:p-8 bg-white rounded-2xl border-l-4 border-[#4169FF] border border-slate-200/80 shadow-md space-y-2 text-center sm:text-left"
+          className="p-6 sm:p-8 bg-blue-50/50 rounded-2xl border border-blue-100 shadow-sm space-y-2 text-center sm:text-left"
         >
           <div className="flex items-center justify-center sm:justify-start gap-3">
             <ShieldCheck className="w-5 h-5 text-[#10B981]" />

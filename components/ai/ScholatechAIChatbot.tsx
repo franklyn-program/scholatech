@@ -204,9 +204,9 @@ export function ScholatechAIChatbot() {
                     <Bot className="w-3.5 h-3.5" />
                   </div>
                   <div className="px-4 py-2 rounded-full bg-[#050816]/90 border border-white/10 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-bounce" />
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-bounce [animation-delay:0.2s]" />
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-bounce [animation-delay:0.4s]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-pulse [animation-delay:0.2s]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#5A7DFF] animate-pulse [animation-delay:0.4s]" />
                   </div>
                 </div>
               )}

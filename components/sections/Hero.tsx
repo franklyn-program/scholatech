@@ -56,7 +56,7 @@ export function Hero() {
             <FadeIn direction="up" delay={0.1}>
               <h1 className="text-[28px] sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-[#F8FAFC] leading-[1.15] sm:leading-[1.08] text-center lg:text-left">
                 Own your school&apos;s tech space and exam system. <br className="hidden md:inline" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6]">
+                <span className="text-[#60A5FA]">
                   Also available offline.
                 </span>
               </h1>

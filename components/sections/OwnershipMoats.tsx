@@ -106,7 +106,7 @@ export function OwnershipMoats() {
             <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-mono font-bold uppercase tracking-wider border border-emerald-100">Infrastructure Independence</span>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 leading-tight">Exams that do not need the internet.</h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">Run Computer Based Tests entirely within your school local area network (LAN). Students connect to a local server in your lab with zero lag, zero data costs, and zero chance of an internet outage ruining exam day.</p>
-            <div className="bg-emerald-50 p-5 rounded-xl border-l-4 border-emerald-500 space-y-1">
+            <div className="bg-emerald-50/70 p-5 rounded-xl border border-emerald-200/80 space-y-1">
               <p className="text-xs font-mono font-bold uppercase text-emerald-700">Scholatech Exclusive:</p>
               <p className="text-xs text-slate-600 leading-relaxed">We provide the hardware configuration and software that bridges your local network to our cloud for instant synchronization once the exam is over.</p>
             </div>

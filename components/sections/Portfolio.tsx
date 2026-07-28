@@ -168,7 +168,7 @@ function LaptopFrame({ project, slideIdx, setSlideIdx, reset }: { project: (type
   return (
     <div className="relative w-full max-w-[620px] mx-auto">
       {/* Screen bezel */}
-      <div className="relative mx-auto rounded-t-2xl bg-[#162347] p-2.5 sm:p-3 border-t-2 border-x-2 border-white/20 shadow-2xl">
+      <div className="relative mx-auto rounded-t-2xl bg-[#162347] p-2.5 sm:p-3 border border-white/15 shadow-2xl">
         {/* Camera dot */}
         <div className="w-2 h-2 rounded-full bg-white/30 mx-auto mb-1.5" />
         {/* Screen */}
